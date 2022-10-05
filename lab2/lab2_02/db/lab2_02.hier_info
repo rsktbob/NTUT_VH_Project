@@ -1,0 +1,243 @@
+|lab2_02
+x[0] => fullsub:stage0.x
+x[1] => fullsub:stage1.x
+x[2] => fullsub:stage2.x
+x[3] => fullsub:stage3.x
+x[4] => fullsub:stage4.x
+x[5] => fullsub:stage5.x
+x[6] => fullsub:stage6.x
+x[7] => fullsub:stage7.x
+y[0] => fullsub:stage0.y
+y[1] => fullsub:stage1.y
+y[2] => fullsub:stage2.y
+y[3] => fullsub:stage3.y
+y[4] => fullsub:stage4.y
+y[5] => fullsub:stage5.y
+y[6] => fullsub:stage6.y
+y[7] => fullsub:stage7.y
+Bout << fullsub:stage7.Bout
+seg[0] << hex:stage8.g0
+seg[1] << hex:stage8.f0
+seg[2] << hex:stage8.e0
+seg[3] << hex:stage8.d0
+seg[4] << hex:stage8.c0
+seg[5] << hex:stage8.b0
+seg[6] << hex:stage8.a0
+seg[7] << hex:stage8.g1
+seg[8] << hex:stage8.f1
+seg[9] << hex:stage8.e1
+seg[10] << hex:stage8.d1
+seg[11] << hex:stage8.c1
+seg[12] << hex:stage8.b1
+seg[13] << hex:stage8.a1
+
+
+|lab2_02|fullsub:stage0
+Bin => d.IN1
+Bin => Bout.IN0
+Bin => Bout.IN0
+x => d.IN0
+x => Bout.IN0
+x => Bout.IN1
+y => d.IN1
+y => Bout.IN1
+y => Bout.IN1
+d <= d.DB_MAX_OUTPUT_PORT_TYPE
+Bout <= Bout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab2_02|fullsub:stage1
+Bin => d.IN1
+Bin => Bout.IN0
+Bin => Bout.IN0
+x => d.IN0
+x => Bout.IN0
+x => Bout.IN1
+y => d.IN1
+y => Bout.IN1
+y => Bout.IN1
+d <= d.DB_MAX_OUTPUT_PORT_TYPE
+Bout <= Bout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab2_02|fullsub:stage2
+Bin => d.IN1
+Bin => Bout.IN0
+Bin => Bout.IN0
+x => d.IN0
+x => Bout.IN0
+x => Bout.IN1
+y => d.IN1
+y => Bout.IN1
+y => Bout.IN1
+d <= d.DB_MAX_OUTPUT_PORT_TYPE
+Bout <= Bout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab2_02|fullsub:stage3
+Bin => d.IN1
+Bin => Bout.IN0
+Bin => Bout.IN0
+x => d.IN0
+x => Bout.IN0
+x => Bout.IN1
+y => d.IN1
+y => Bout.IN1
+y => Bout.IN1
+d <= d.DB_MAX_OUTPUT_PORT_TYPE
+Bout <= Bout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab2_02|fullsub:stage4
+Bin => d.IN1
+Bin => Bout.IN0
+Bin => Bout.IN0
+x => d.IN0
+x => Bout.IN0
+x => Bout.IN1
+y => d.IN1
+y => Bout.IN1
+y => Bout.IN1
+d <= d.DB_MAX_OUTPUT_PORT_TYPE
+Bout <= Bout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab2_02|fullsub:stage5
+Bin => d.IN1
+Bin => Bout.IN0
+Bin => Bout.IN0
+x => d.IN0
+x => Bout.IN0
+x => Bout.IN1
+y => d.IN1
+y => Bout.IN1
+y => Bout.IN1
+d <= d.DB_MAX_OUTPUT_PORT_TYPE
+Bout <= Bout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab2_02|fullsub:stage6
+Bin => d.IN1
+Bin => Bout.IN0
+Bin => Bout.IN0
+x => d.IN0
+x => Bout.IN0
+x => Bout.IN1
+y => d.IN1
+y => Bout.IN1
+y => Bout.IN1
+d <= d.DB_MAX_OUTPUT_PORT_TYPE
+Bout <= Bout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab2_02|fullsub:stage7
+Bin => d.IN1
+Bin => Bout.IN0
+Bin => Bout.IN0
+x => d.IN0
+x => Bout.IN0
+x => Bout.IN1
+y => d.IN1
+y => Bout.IN1
+y => Bout.IN1
+d <= d.DB_MAX_OUTPUT_PORT_TYPE
+Bout <= Bout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab2_02|hex:stage8
+sw0 => a0.IN1
+sw0 => a0.IN1
+sw0 => a0.IN1
+sw0 => b0.IN1
+sw0 => b0.IN1
+sw0 => d0.IN1
+sw0 => d0.IN1
+sw0 => e0.IN0
+sw0 => f0.IN1
+sw0 => f0.IN1
+sw0 => g0.IN1
+sw0 => a0.IN1
+sw0 => a0.IN1
+sw0 => b0.IN1
+sw0 => b0.IN1
+sw0 => c0.IN1
+sw0 => c0.IN1
+sw0 => d0.IN1
+sw1 => a0.IN1
+sw1 => b0.IN1
+sw1 => b0.IN1
+sw1 => c0.IN1
+sw1 => d0.IN0
+sw1 => f0.IN0
+sw1 => a0.IN1
+sw1 => a0.IN1
+sw1 => a0.IN1
+sw1 => d0.IN0
+sw2 => a0.IN0
+sw2 => a0.IN0
+sw2 => d0.IN1
+sw2 => a0.IN0
+sw2 => a0.IN0
+sw2 => d0.IN1
+sw3 => a0.IN1
+sw3 => a0.IN1
+sw3 => a0.IN1
+sw3 => a0.IN1
+sw3 => e0.IN1
+sw3 => f0.IN1
+sw4 => a1.IN1
+sw4 => a1.IN1
+sw4 => a1.IN1
+sw4 => b1.IN1
+sw4 => b1.IN1
+sw4 => d1.IN1
+sw4 => d1.IN1
+sw4 => e1.IN0
+sw4 => f1.IN1
+sw4 => f1.IN1
+sw4 => g1.IN1
+sw4 => a1.IN1
+sw4 => a1.IN1
+sw4 => b1.IN1
+sw4 => b1.IN1
+sw4 => c1.IN1
+sw4 => c1.IN1
+sw4 => d1.IN1
+sw5 => a1.IN1
+sw5 => b1.IN1
+sw5 => b1.IN1
+sw5 => c1.IN1
+sw5 => d1.IN0
+sw5 => f1.IN0
+sw5 => a1.IN1
+sw5 => a1.IN1
+sw5 => a1.IN1
+sw5 => d1.IN0
+sw6 => a1.IN0
+sw6 => a1.IN0
+sw6 => d1.IN1
+sw6 => a1.IN0
+sw6 => a1.IN0
+sw6 => d1.IN1
+sw7 => a1.IN1
+sw7 => a1.IN1
+sw7 => a1.IN1
+sw7 => a1.IN1
+sw7 => e1.IN1
+sw7 => f1.IN1
+a0 <= a0.DB_MAX_OUTPUT_PORT_TYPE
+b0 <= b0.DB_MAX_OUTPUT_PORT_TYPE
+c0 <= c0.DB_MAX_OUTPUT_PORT_TYPE
+d0 <= d0.DB_MAX_OUTPUT_PORT_TYPE
+e0 <= e0.DB_MAX_OUTPUT_PORT_TYPE
+f0 <= f0.DB_MAX_OUTPUT_PORT_TYPE
+g0 <= g0.DB_MAX_OUTPUT_PORT_TYPE
+a1 <= a1.DB_MAX_OUTPUT_PORT_TYPE
+b1 <= b1.DB_MAX_OUTPUT_PORT_TYPE
+c1 <= c1.DB_MAX_OUTPUT_PORT_TYPE
+d1 <= d1.DB_MAX_OUTPUT_PORT_TYPE
+e1 <= e1.DB_MAX_OUTPUT_PORT_TYPE
+f1 <= f1.DB_MAX_OUTPUT_PORT_TYPE
+g1 <= g1.DB_MAX_OUTPUT_PORT_TYPE
+
+

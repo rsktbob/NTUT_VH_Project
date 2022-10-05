@@ -1,0 +1,25 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use work.lab2_01_package.all;
+
+entity lab2_01 is
+	port( x,y : in std_logic_vector(7 downto 0);
+			Cout : out std_logic;
+			seg : out std_logic_vector(13 downto 0));
+end lab2_01;
+
+architecture func of lab2_01 is
+	signal c : std_logic_vector(7 downto 0);
+	signal s : std_logic_vector(7 downto 0);
+begin
+	c(0) <= '0';
+	stage0 : fullsub port map(c(0),x(0),y(0),s(0),c(1)); 
+	stage1 : fullsub port map(c(1),x(1),y(1),s(1),c(2)); 
+	stage2 : fullsub port map(c(2),x(2),y(2),s(2),c(3)); 
+	stage3 : fullsub port map(c(3),x(3),y(3),s(3),c(4)); 
+	stage4 : fullsub port map(c(4),x(4),y(4),s(4),c(5)); 
+	stage5 : fullsub port map(c(5),x(5),y(5),s(5),c(6)); 
+	stage6 : fullsub port map(c(6),x(6),y(6),s(6),c(7)); 
+	stage7 : fullsub port map(c(7),x(7),y(7),s(7),cout);
+	stage8 : hex port map(s(0),s(1),s(2),s(3),s(4),s(5),s(6),s(7),seg(6),seg(5),seg(4),seg(3),seg(2),seg(1),seg(0),seg(13),seg(12),seg(11),seg(10),seg(9),seg(8),seg(7));
+end func;
