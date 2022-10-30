@@ -1,0 +1,9 @@
+library ieee;
+use ieee.std_logic_1164.all;
+package lab4_01_package is
+	component alu
+		port( Cin, a, b, less : in std_logic;
+				Ctrol : in std_logic_vector(3 downto 0);
+				Result, Cout : out std_logic);
+	end component;
+end lab4_01_package;

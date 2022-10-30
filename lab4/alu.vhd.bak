@@ -1,0 +1,26 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity alu is
+	port( Cin, a, b, less : in std_logic;
+			Ctrol : in std_logic_vector(3 downto 0);
+			Result, Cout : out std_logic);
+end alu;
+
+architecture func of alu is
+	signal at, bt : std_logic;
+begin
+	with Ctrol(3) select
+		at <= a when '0',
+				not a when '1';
+	with Ctrol(2) select
+		bt <= b when '0',
+				not b when '1';
+	with Ctrol(1:0) select
+		Result <= at and bt when "00",
+					 at or bt when "01",
+					 at xor bt xor Cin when "10",
+					 less when "11";
+	Cout <= (at and bt) or (at and Cin) or (bt and Cin);
+end func;
+	

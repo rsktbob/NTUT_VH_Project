@@ -1,0 +1,14 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use work.lab4_01_package.all;
+
+entity lab4_01 is
+	port( Cin, a, b, less : in std_logic;
+			Ctrol : in std_logic_vector(3 downto 0);
+			Result, Cout : out std_logic);
+end lab4_01;
+
+architecture func of lab4_01 is			
+begin
+	stage0:alu port map(Cin, a, b, less, Ctrol, Result, Cout );
+end func;

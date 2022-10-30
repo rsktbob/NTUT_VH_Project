@@ -1,0 +1,143 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/intelFPGA_lite/18.1/lab4/simulation/qsim
+Ehard_block
+Z1 w1666274599
+Z2 DPx4 ieee 16 vital_primitives 0 22 G>kiXP8Q9dRClKfK1Zn7j1
+Z3 DPx10 cycloneive 20 cycloneive_atom_pack 0 22 g8;l:a_bzlE?3R3d7zk3Z0
+Z4 DPx4 ieee 12 vital_timing 0 22 J>EBealN09f8GzldA[z2>3
+Z5 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z6 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+Z7 DPx10 cycloneive 21 cycloneive_components 0 22 Yj^f[Ven<H;0LiK:6PWEg0
+R0
+Z8 8lab4_01.vho
+Z9 Flab4_01.vho
+l0
+L34
+VOgIg9T_BR7joedFDVM>H13
+!s100 A`ID_i56<Ua56=ZD=[EG=2
+Z10 OV;C;10.5b;63
+32
+Z11 !s110 1666274600
+!i10b 1
+Z12 !s108 1666274600.000000
+Z13 !s90 -work|work|lab4_01.vho|
+Z14 !s107 lab4_01.vho|
+!i113 1
+Z15 o-work work
+Z16 tExplicit 1 CvgOpt 0
+Astructure
+R2
+R3
+R4
+R5
+R6
+R7
+DEx4 work 10 hard_block 0 22 OgIg9T_BR7joedFDVM>H13
+l64
+L50
+V`^CmQg<48W[ez[JL_5@Yn2
+!s100 2S?JL;LJ@<3:BHXTNcXS]3
+R10
+32
+R11
+!i10b 1
+R12
+R13
+R14
+!i113 1
+R15
+R16
+Elab4_01
+R1
+R2
+R3
+R4
+R5
+R6
+R7
+R0
+R8
+R9
+l0
+L77
+VoFKMoOa?j44AMgjRDkKkG3
+!s100 NSJ@NzTd>QZK:fTcS1c^=0
+R10
+32
+R11
+!i10b 1
+R12
+R13
+R14
+!i113 1
+R15
+R16
+Astructure
+R2
+R3
+R4
+R5
+R6
+R7
+DEx4 work 7 lab4_01 0 22 oFKMoOa?j44AMgjRDkKkG3
+l235
+L129
+VgoL^9>275N]z`3CjMkX]22
+!s100 B:_GF>LXi0Y97[Cj=O_c=1
+R10
+32
+R11
+!i10b 1
+R12
+R13
+R14
+!i113 1
+R15
+R16
+Elab4_01_vhd_vec_tst
+R1
+R5
+R6
+R0
+Z17 8Waveform.vwf.vht
+Z18 FWaveform.vwf.vht
+l0
+L31
+VK=@29QfBG5k>1H7l<9U0H3
+!s100 h434:N67>2C7<J09LT;4]2
+R10
+32
+R11
+!i10b 1
+R12
+Z19 !s90 -work|work|Waveform.vwf.vht|
+Z20 !s107 Waveform.vwf.vht|
+!i113 1
+R15
+R16
+Alab4_01_arch
+R5
+R6
+Z21 DEx4 work 19 lab4_01_vhd_vec_tst 0 22 K=@29QfBG5k>1H7l<9U0H3
+l50
+L33
+V5dO_P2ZT:V4oniFh5U6AO0
+!s100 ENjGY0Uo4MAT@Wm>X7IMV1
+R10
+32
+R11
+!i10b 1
+R12
+R19
+R20
+!i113 1
+R15
+R16
