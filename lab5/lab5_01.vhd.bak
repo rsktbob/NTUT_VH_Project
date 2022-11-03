@@ -1,0 +1,20 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity D is
+	port( D : in std_logic;
+			VD : in std_logic;
+			Q : buffer std_logic;
+			PR : in std_logic;
+			CLR : in std_logic);
+			
+architecture func of lab5_01 is
+begin
+	if CLR='1' 	then
+		Q <= '0';
+	else if PR='1' then
+		Q <= VD;
+	else
+		Q <= D;
+	end if;
+end func;

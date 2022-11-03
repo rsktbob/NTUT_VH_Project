@@ -1,5 +1,5 @@
 Analysis & Synthesis report for lab4_01
-Sat Oct 22 15:37:01 2022
+Wed Nov 02 16:09:23 2022
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -50,7 +50,7 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sat Oct 22 15:37:01 2022       ;
+; Analysis & Synthesis Status        ; Successful - Wed Nov 02 16:09:23 2022       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; lab4_01                                     ;
 ; Top-level Entity Name              ; lab4_01                                     ;
@@ -169,16 +169,16 @@ refer to the applicable agreement for further details.
 +----------------------------+-------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                           ;
-+----------------------------------+-----------------+-----------------+-------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                    ; Library ;
-+----------------------------------+-----------------+-----------------+-------------------------------------------------+---------+
-; alu.vhd                          ; yes             ; User VHDL File  ; C:/intelFPGA_lite/18.1/lab4/alu.vhd             ;         ;
-; lab4_01_package.vhd              ; yes             ; User VHDL File  ; C:/intelFPGA_lite/18.1/lab4/lab4_01_package.vhd ;         ;
-; lab4_01.vhd                      ; yes             ; User VHDL File  ; C:/intelFPGA_lite/18.1/lab4/lab4_01.vhd         ;         ;
-; hex.vhd                          ; yes             ; User VHDL File  ; C:/intelFPGA_lite/18.1/lab4/hex.vhd             ;         ;
-+----------------------------------+-----------------+-----------------+-------------------------------------------------+---------+
++-------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                            ;
++----------------------------------+-----------------+-----------------+----------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path     ; Library ;
++----------------------------------+-----------------+-----------------+----------------------------------+---------+
+; alu.vhd                          ; yes             ; User VHDL File  ; D:/vhdl/lab4/alu.vhd             ;         ;
+; lab4_01_package.vhd              ; yes             ; User VHDL File  ; D:/vhdl/lab4/lab4_01_package.vhd ;         ;
+; lab4_01.vhd                      ; yes             ; User VHDL File  ; D:/vhdl/lab4/lab4_01.vhd         ;         ;
+; hex.vhd                          ; yes             ; User VHDL File  ; D:/vhdl/lab4/hex.vhd             ;         ;
++----------------------------------+-----------------+-----------------+----------------------------------+---------+
 
 
 +--------------------------------------------------------------+
@@ -355,24 +355,24 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Sat Oct 22 15:36:53 2022
+    Info: Processing started: Wed Nov 02 16:09:15 2022
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off lab4_01 -c lab4_01
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
 Info (12021): Found 2 design units, including 1 entities, in source file alu.vhd
-    Info (12022): Found design unit 1: alu-func File: C:/intelFPGA_lite/18.1/lab4/alu.vhd Line: 11
-    Info (12023): Found entity 1: alu File: C:/intelFPGA_lite/18.1/lab4/alu.vhd Line: 4
+    Info (12022): Found design unit 1: alu-func File: D:/vhdl/lab4/alu.vhd Line: 11
+    Info (12023): Found entity 1: alu File: D:/vhdl/lab4/alu.vhd Line: 4
 Info (12021): Found 1 design units, including 0 entities, in source file lab4_01_package.vhd
-    Info (12022): Found design unit 1: lab4_01_package File: C:/intelFPGA_lite/18.1/lab4/lab4_01_package.vhd Line: 3
+    Info (12022): Found design unit 1: lab4_01_package File: D:/vhdl/lab4/lab4_01_package.vhd Line: 3
 Info (12021): Found 2 design units, including 1 entities, in source file lab4_01.vhd
-    Info (12022): Found design unit 1: lab4_01-func File: C:/intelFPGA_lite/18.1/lab4/lab4_01.vhd Line: 11
-    Info (12023): Found entity 1: lab4_01 File: C:/intelFPGA_lite/18.1/lab4/lab4_01.vhd Line: 5
+    Info (12022): Found design unit 1: lab4_01-func File: D:/vhdl/lab4/lab4_01.vhd Line: 11
+    Info (12023): Found entity 1: lab4_01 File: D:/vhdl/lab4/lab4_01.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file hex.vhd
-    Info (12022): Found design unit 1: hex-func File: C:/intelFPGA_lite/18.1/lab4/hex.vhd Line: 9
-    Info (12023): Found entity 1: hex File: C:/intelFPGA_lite/18.1/lab4/hex.vhd Line: 4
+    Info (12022): Found design unit 1: hex-func File: D:/vhdl/lab4/hex.vhd Line: 9
+    Info (12023): Found entity 1: hex File: D:/vhdl/lab4/hex.vhd Line: 4
 Info (12127): Elaborating entity "lab4_01" for the top level hierarchy
-Info (12128): Elaborating entity "alu" for hierarchy "alu:\G1:0:G3:compute2" File: C:/intelFPGA_lite/18.1/lab4/lab4_01.vhd Line: 19
-Info (12128): Elaborating entity "hex" for hierarchy "hex:stage1" File: C:/intelFPGA_lite/18.1/lab4/lab4_01.vhd Line: 22
+Info (12128): Elaborating entity "alu" for hierarchy "alu:\G1:0:G3:compute2" File: D:/vhdl/lab4/lab4_01.vhd Line: 19
+Info (12128): Elaborating entity "hex" for hierarchy "hex:stage1" File: D:/vhdl/lab4/lab4_01.vhd Line: 22
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
@@ -381,9 +381,9 @@ Info (21057): Implemented 76 device resources after synthesis - the final resour
     Info (21059): Implemented 14 output pins
     Info (21061): Implemented 44 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 2 warnings
-    Info: Peak virtual memory: 4797 megabytes
-    Info: Processing ended: Sat Oct 22 15:37:01 2022
+    Info: Peak virtual memory: 4801 megabytes
+    Info: Processing ended: Wed Nov 02 16:09:23 2022
     Info: Elapsed time: 00:00:08
-    Info: Total CPU time (on all processors): 00:00:15
+    Info: Total CPU time (on all processors): 00:00:16
 
 
