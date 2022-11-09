@@ -23,15 +23,15 @@ begin
 					qo <= di;
 			else
 				if lr_sel='0' then
-					for i in N downto 1 loop
+					for i in 1 to 7 loop
 						qo(i) <= qo(i-1);
 					end loop;
 					qo(0) <= sdi;
 				else
-					for i in 1 to N-1 loop
+					for i in 6 downto 0 loop
 						qo(i) <= qo(i+1);
 					end loop;
-					qo(N) <= sdi;
+					qo(7) <= sdi;
 				end if;
 			end if;
 		end if;
