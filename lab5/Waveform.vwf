@@ -20,6 +20,7 @@ proc simTimestamp {} {
 after 2500 simTimestamp
 run -all
 quit -f
+
 </modelsim_script>
 <modelsim_script_timing>onerror {exit -code 1}
 vlib work
@@ -38,6 +39,7 @@ proc simTimestamp {} {
 after 2500 simTimestamp
 run -all
 quit -f
+
 </modelsim_script_timing>
 <hdl_lang>vhdl</hdl_lang>
 </simulation_settings>*/
@@ -310,9 +312,7 @@ TRANSITION_LIST("clear")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 50.0;
-		LEVEL 1 FOR 30.0;
-		LEVEL 0 FOR 920.0;
+		LEVEL 0 FOR 1000.0;
 	}
 }
 
@@ -335,9 +335,7 @@ TRANSITION_LIST("di[7]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 20.0;
-		LEVEL 1 FOR 60.0;
-		LEVEL 0 FOR 920.0;
+		LEVEL 0 FOR 1000.0;
 	}
 }
 
@@ -346,9 +344,7 @@ TRANSITION_LIST("di[6]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 20.0;
-		LEVEL 1 FOR 60.0;
-		LEVEL 0 FOR 920.0;
+		LEVEL 0 FOR 1000.0;
 	}
 }
 
@@ -357,9 +353,7 @@ TRANSITION_LIST("di[5]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 20.0;
-		LEVEL 1 FOR 60.0;
-		LEVEL 0 FOR 920.0;
+		LEVEL 0 FOR 1000.0;
 	}
 }
 
@@ -368,10 +362,7 @@ TRANSITION_LIST("di[4]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 1 FOR 30.0;
-		LEVEL 0 FOR 40.0;
-		LEVEL 1 FOR 60.0;
-		LEVEL 0 FOR 870.0;
+		LEVEL 0 FOR 1000.0;
 	}
 }
 
@@ -380,10 +371,7 @@ TRANSITION_LIST("di[3]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 1 FOR 30.0;
-		LEVEL 0 FOR 40.0;
-		LEVEL 1 FOR 60.0;
-		LEVEL 0 FOR 870.0;
+		LEVEL 0 FOR 1000.0;
 	}
 }
 
@@ -392,10 +380,7 @@ TRANSITION_LIST("di[2]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 1 FOR 30.0;
-		LEVEL 0 FOR 40.0;
-		LEVEL 1 FOR 60.0;
-		LEVEL 0 FOR 870.0;
+		LEVEL 0 FOR 1000.0;
 	}
 }
 
@@ -404,10 +389,7 @@ TRANSITION_LIST("di[1]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 1 FOR 30.0;
-		LEVEL 0 FOR 40.0;
-		LEVEL 1 FOR 60.0;
-		LEVEL 0 FOR 870.0;
+		LEVEL 0 FOR 1000.0;
 	}
 }
 
@@ -416,10 +398,7 @@ TRANSITION_LIST("di[0]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 1 FOR 30.0;
-		LEVEL 0 FOR 40.0;
-		LEVEL 1 FOR 60.0;
-		LEVEL 0 FOR 870.0;
+		LEVEL 0 FOR 1000.0;
 	}
 }
 
@@ -428,8 +407,7 @@ TRANSITION_LIST("load")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 1 FOR 130.0;
-		LEVEL 0 FOR 870.0;
+		LEVEL 0 FOR 1000.0;
 	}
 }
 
@@ -438,10 +416,7 @@ TRANSITION_LIST("lr_sel")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 1 FOR 640.0;
-		LEVEL 0 FOR 160.0;
-		LEVEL 1 FOR 160.0;
-		LEVEL 0 FOR 40.0;
+		LEVEL 0 FOR 1000.0;
 	}
 }
 
@@ -538,8 +513,10 @@ TRANSITION_LIST("sdi")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 1 FOR 350.0;
-		LEVEL 0 FOR 650.0;
+		LEVEL 1 FOR 30.0;
+		LEVEL 0 FOR 350.0;
+		LEVEL 1 FOR 50.0;
+		LEVEL 0 FOR 570.0;
 	}
 }
 

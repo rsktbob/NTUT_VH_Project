@@ -1,5 +1,5 @@
 Analysis & Synthesis report for lab5_01
-Wed Nov 09 12:12:28 2022
+Sat Nov 12 22:06:59 2022
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -44,7 +44,7 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Wed Nov 09 12:12:28 2022       ;
+; Analysis & Synthesis Status        ; Successful - Sat Nov 12 22:06:59 2022       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; lab5_01                                     ;
 ; Top-level Entity Name              ; lab5_01                                     ;
@@ -234,7 +234,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
-; 4:1                ; 7 bits    ; 14 LEs        ; 14 LEs               ; 0 LEs                  ; Yes        ; |lab5_01|qo[1]~reg0        ;
+; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; Yes        ; |lab5_01|qo[0]~reg0        ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
 
 
@@ -280,7 +280,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Wed Nov 09 12:12:20 2022
+    Info: Processing started: Sat Nov 12 22:06:51 2022
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off lab5_01 -c lab5_01
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
@@ -296,8 +296,8 @@ Info (21057): Implemented 29 device resources after synthesis - the final resour
     Info (21061): Implemented 8 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 2 warnings
     Info: Peak virtual memory: 4792 megabytes
-    Info: Processing ended: Wed Nov 09 12:12:28 2022
+    Info: Processing ended: Sat Nov 12 22:06:59 2022
     Info: Elapsed time: 00:00:08
-    Info: Total CPU time (on all processors): 00:00:15
+    Info: Total CPU time (on all processors): 00:00:16
 
 

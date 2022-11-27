@@ -1,5 +1,6 @@
 vendor_name = ModelSim
 source_file = 1, D:/vhdl/lab5/lab5_01.vhd
+source_file = 1, D:/vhdl/lab5/Waveform.vwf
 source_file = 1, c:/intelfpga_lite/18.1/quartus/libraries/vhdl/ieee/prmtvs_b.vhd
 source_file = 1, c:/intelfpga_lite/18.1/quartus/libraries/vhdl/ieee/prmtvs_p.vhd
 source_file = 1, c:/intelfpga_lite/18.1/quartus/libraries/vhdl/ieee/timing_b.vhd
@@ -16,7 +17,6 @@ instance = comp, \qo[5]~output\, qo[5]~output, lab5_01, 1
 instance = comp, \qo[6]~output\, qo[6]~output, lab5_01, 1
 instance = comp, \qo[7]~output\, qo[7]~output, lab5_01, 1
 instance = comp, \clk~input\, clk~input, lab5_01, 1
-instance = comp, \clk~inputclkctrl\, clk~inputclkctrl, lab5_01, 1
 instance = comp, \sdi~input\, sdi~input, lab5_01, 1
 instance = comp, \lr_sel~input\, lr_sel~input, lab5_01, 1
 instance = comp, \qo[7]~7\, qo[7]~7, lab5_01, 1

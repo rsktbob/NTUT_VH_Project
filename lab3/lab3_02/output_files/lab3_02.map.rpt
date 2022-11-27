@@ -1,5 +1,5 @@
 Analysis & Synthesis report for lab3_02
-Mon Oct 10 20:29:58 2022
+Mon Nov 14 22:41:44 2022
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -47,7 +47,7 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Mon Oct 10 20:29:58 2022       ;
+; Analysis & Synthesis Status        ; Successful - Mon Nov 14 22:41:44 2022       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; lab3_02                                     ;
 ; Top-level Entity Name              ; lab3_02                                     ;
@@ -166,16 +166,16 @@ refer to the applicable agreement for further details.
 +----------------------------+-------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                   ;
-+----------------------------------+-----------------+-----------------+---------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                            ; Library ;
-+----------------------------------+-----------------+-----------------+---------------------------------------------------------+---------+
-; fulladd.vhd                      ; yes             ; User VHDL File  ; C:/intelFPGA_lite/18.1/lab3/lab3_02/fulladd.vhd         ;         ;
-; hex.vhd                          ; yes             ; User VHDL File  ; C:/intelFPGA_lite/18.1/lab3/lab3_02/hex.vhd             ;         ;
-; lab3_02_package.vhd              ; yes             ; User VHDL File  ; C:/intelFPGA_lite/18.1/lab3/lab3_02/lab3_02_package.vhd ;         ;
-; lab3_02.vhd                      ; yes             ; User VHDL File  ; C:/intelFPGA_lite/18.1/lab3/lab3_02/lab3_02.vhd         ;         ;
-+----------------------------------+-----------------+-----------------+---------------------------------------------------------+---------+
++---------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                    ;
++----------------------------------+-----------------+-----------------+------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path             ; Library ;
++----------------------------------+-----------------+-----------------+------------------------------------------+---------+
+; fulladd.vhd                      ; yes             ; User VHDL File  ; D:/vhdl/lab3/lab3_02/fulladd.vhd         ;         ;
+; hex.vhd                          ; yes             ; User VHDL File  ; D:/vhdl/lab3/lab3_02/hex.vhd             ;         ;
+; lab3_02_package.vhd              ; yes             ; User VHDL File  ; D:/vhdl/lab3/lab3_02/lab3_02_package.vhd ;         ;
+; lab3_02.vhd                      ; yes             ; User VHDL File  ; D:/vhdl/lab3/lab3_02/lab3_02.vhd         ;         ;
++----------------------------------+-----------------+-----------------+------------------------------------------+---------+
 
 
 +------------------------------------------------------------------+
@@ -330,24 +330,24 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Mon Oct 10 20:29:50 2022
+    Info: Processing started: Mon Nov 14 22:41:35 2022
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off lab3_02 -c lab3_02
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
 Info (12021): Found 2 design units, including 1 entities, in source file fulladd.vhd
-    Info (12022): Found design unit 1: fulladd-func File: C:/intelFPGA_lite/18.1/lab3/lab3_02/fulladd.vhd Line: 9
-    Info (12023): Found entity 1: fulladd File: C:/intelFPGA_lite/18.1/lab3/lab3_02/fulladd.vhd Line: 4
+    Info (12022): Found design unit 1: fulladd-func File: D:/vhdl/lab3/lab3_02/fulladd.vhd Line: 9
+    Info (12023): Found entity 1: fulladd File: D:/vhdl/lab3/lab3_02/fulladd.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file hex.vhd
-    Info (12022): Found design unit 1: hex-func File: C:/intelFPGA_lite/18.1/lab3/lab3_02/hex.vhd Line: 9
-    Info (12023): Found entity 1: hex File: C:/intelFPGA_lite/18.1/lab3/lab3_02/hex.vhd Line: 4
+    Info (12022): Found design unit 1: hex-func File: D:/vhdl/lab3/lab3_02/hex.vhd Line: 9
+    Info (12023): Found entity 1: hex File: D:/vhdl/lab3/lab3_02/hex.vhd Line: 4
 Info (12021): Found 1 design units, including 0 entities, in source file lab3_02_package.vhd
-    Info (12022): Found design unit 1: lab3_02_package File: C:/intelFPGA_lite/18.1/lab3/lab3_02/lab3_02_package.vhd Line: 3
+    Info (12022): Found design unit 1: lab3_02_package File: D:/vhdl/lab3/lab3_02/lab3_02_package.vhd Line: 3
 Info (12021): Found 2 design units, including 1 entities, in source file lab3_02.vhd
-    Info (12022): Found design unit 1: lab3_02-func File: C:/intelFPGA_lite/18.1/lab3/lab3_02/lab3_02.vhd Line: 10
-    Info (12023): Found entity 1: lab3_02 File: C:/intelFPGA_lite/18.1/lab3/lab3_02/lab3_02.vhd Line: 5
+    Info (12022): Found design unit 1: lab3_02-func File: D:/vhdl/lab3/lab3_02/lab3_02.vhd Line: 10
+    Info (12023): Found entity 1: lab3_02 File: D:/vhdl/lab3/lab3_02/lab3_02.vhd Line: 5
 Info (12127): Elaborating entity "lab3_02" for the top level hierarchy
-Info (12128): Elaborating entity "fulladd" for hierarchy "fulladd:stage0" File: C:/intelFPGA_lite/18.1/lab3/lab3_02/lab3_02.vhd Line: 17
-Info (12128): Elaborating entity "hex" for hierarchy "hex:stage16" File: C:/intelFPGA_lite/18.1/lab3/lab3_02/lab3_02.vhd Line: 42
+Info (12128): Elaborating entity "fulladd" for hierarchy "fulladd:stage0" File: D:/vhdl/lab3/lab3_02/lab3_02.vhd Line: 16
+Info (12128): Elaborating entity "hex" for hierarchy "hex:stage16" File: D:/vhdl/lab3/lab3_02/lab3_02.vhd Line: 37
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
@@ -356,9 +356,9 @@ Info (21057): Implemented 70 device resources after synthesis - the final resour
     Info (21059): Implemented 14 output pins
     Info (21061): Implemented 40 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 2 warnings
-    Info: Peak virtual memory: 4797 megabytes
-    Info: Processing ended: Mon Oct 10 20:29:58 2022
-    Info: Elapsed time: 00:00:08
-    Info: Total CPU time (on all processors): 00:00:16
+    Info: Peak virtual memory: 4799 megabytes
+    Info: Processing ended: Mon Nov 14 22:41:44 2022
+    Info: Elapsed time: 00:00:09
+    Info: Total CPU time (on all processors): 00:00:17
 
 

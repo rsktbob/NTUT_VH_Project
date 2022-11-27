@@ -1,5 +1,5 @@
 Fitter report for lab3_02
-Mon Oct 10 20:30:27 2022
+Mon Nov 14 22:41:51 2022
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -62,7 +62,7 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Fitter Summary                                                                   ;
 +------------------------------------+---------------------------------------------+
-; Fitter Status                      ; Successful - Mon Oct 10 20:30:27 2022       ;
+; Fitter Status                      ; Successful - Mon Nov 14 22:41:50 2022       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; lab3_02                                     ;
 ; Top-level Entity Name              ; lab3_02                                     ;
@@ -196,7 +196,7 @@ refer to the applicable agreement for further details.
 +--------------+
 ; Pin-Out File ;
 +--------------+
-The pin-out file can be found in C:/intelFPGA_lite/18.1/lab3/lab3_02/output_files/lab3_02.pin.
+The pin-out file can be found in D:/vhdl/lab3/lab3_02/output_files/lab3_02.pin.
 
 
 +----------------------------------------------------------------------+
@@ -1632,7 +1632,7 @@ Info (332130): Timing requirements not specified -- quality metrics such as perf
 Info (176233): Starting register packing
 Info (176235): Finished register packing
     Extra Info (176219): No registers were packed into other blocks
-Info (171121): Fitter preparation operations ending: elapsed time is 00:00:00
+Info (171121): Fitter preparation operations ending: elapsed time is 00:00:01
 Info (14896): Fitter has disabled Advanced Physical Optimization because it is not supported for the current family.
 Info (170189): Fitter placement preparation operations beginning
 Info (170190): Fitter placement preparation operations ending: elapsed time is 00:00:00
@@ -1646,23 +1646,23 @@ Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were
     Info (170201): Optimizations that may affect the design's routability were skipped
     Info (170200): Optimizations that may affect the design's timing were skipped
 Info (170194): Fitter routing operations ending: elapsed time is 00:00:00
-Info (11888): Total time spent on timing analysis during the Fitter is 0.04 seconds.
+Info (11888): Total time spent on timing analysis during the Fitter is 0.03 seconds.
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
-Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:01
-Info (144001): Generated suppressed messages file C:/intelFPGA_lite/18.1/lab3/lab3_02/output_files/lab3_02.fit.smsg
-Info: Quartus Prime Fitter was successful. 0 errors, 5 warnings
-    Info: Peak virtual memory: 5845 megabytes
-    Info: Processing ended: Mon Oct 10 20:30:28 2022
-    Info: Elapsed time: 00:00:29
-    Info: Total CPU time (on all processors): 00:00:10
+Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:00
+Info (144001): Generated suppressed messages file D:/vhdl/lab3/lab3_02/output_files/lab3_02.fit.smsg
+Info: Quartus Prime Fitter was successful. 0 errors, 6 warnings
+    Info: Peak virtual memory: 5848 megabytes
+    Info: Processing ended: Mon Nov 14 22:41:51 2022
+    Info: Elapsed time: 00:00:07
+    Info: Total CPU time (on all processors): 00:00:11
 
 
 +----------------------------+
 ; Fitter Suppressed Messages ;
 +----------------------------+
-The suppressed messages can be found in C:/intelFPGA_lite/18.1/lab3/lab3_02/output_files/lab3_02.fit.smsg.
+The suppressed messages can be found in D:/vhdl/lab3/lab3_02/output_files/lab3_02.fit.smsg.
 
 

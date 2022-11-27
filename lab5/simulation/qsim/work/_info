@@ -9,7 +9,7 @@ z2
 cModel Technology
 Z0 dD:/vhdl/lab5/simulation/qsim
 Ehard_block
-Z1 w1667469592
+Z1 w1668262351
 Z2 DPx4 ieee 16 vital_primitives 0 22 G>kiXP8Q9dRClKfK1Zn7j1
 Z3 DPx10 cycloneive 20 cycloneive_atom_pack 0 22 g8;l:a_bzlE?3R3d7zk3Z0
 Z4 DPx4 ieee 12 vital_timing 0 22 J>EBealN09f8GzldA[z2>3
@@ -25,9 +25,9 @@ VOgIg9T_BR7joedFDVM>H13
 !s100 A`ID_i56<Ua56=ZD=[EG=2
 Z10 OV;C;10.5b;63
 32
-Z11 !s110 1667469593
+Z11 !s110 1668262352
 !i10b 1
-Z12 !s108 1667469593.000000
+Z12 !s108 1668262352.000000
 Z13 !s90 -work|work|lab5_01.vho|
 Z14 !s107 lab5_01.vho|
 !i113 1
@@ -92,10 +92,10 @@ R5
 R6
 R18
 DEx4 work 7 lab5_01 0 22 >DF^DHBc[AMXgdOnb8_cj2
-l179
+l177
 L115
-VL7^::b0UbDEo2[3IEQ[dn2
-!s100 L4INTTiS9[P[EB_HdWfO[1
+Ve^8Sb<mifiFm20d2izjjc2
+!s100 llgFRKL3m9@ZT9Zea88JV1
 R10
 32
 R11
@@ -107,12 +107,12 @@ R14
 R15
 R16
 Elab5_01_vhd_vec_tst
-R1
+Z19 w1668262350
 R5
 R6
 R0
-Z19 8Waveform.vwf.vht
-Z20 FWaveform.vwf.vht
+Z20 8Waveform.vwf.vht
+Z21 FWaveform.vwf.vht
 l0
 L31
 VGf:M:Ng0h5kaMo]gEWMYg2
@@ -122,26 +122,26 @@ R10
 R11
 !i10b 1
 R12
-Z21 !s90 -work|work|Waveform.vwf.vht|
-Z22 !s107 Waveform.vwf.vht|
+Z22 !s90 -work|work|Waveform.vwf.vht|
+Z23 !s107 Waveform.vwf.vht|
 !i113 1
 R15
 R16
 Alab5_01_arch
 R5
 R6
-Z23 DEx4 work 19 lab5_01_vhd_vec_tst 0 22 Gf:M:Ng0h5kaMo]gEWMYg2
+Z24 DEx4 work 19 lab5_01_vhd_vec_tst 0 22 Gf:M:Ng0h5kaMo]gEWMYg2
 l54
 L33
-VH7NHEc;U0=HoJAk7Xd;^G3
-!s100 `DU0dn5TIFX[_J]hJ?`IV2
+Z25 Vmc]Ezb6@QfL36GcKZ63zR1
+Z26 !s100 :<]EKlT@`I14;KZcIn>Md0
 R10
 32
 R11
 !i10b 1
 R12
-R21
 R22
+R23
 !i113 1
 R15
 R16

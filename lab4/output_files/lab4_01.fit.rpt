@@ -1,5 +1,5 @@
 Fitter report for lab4_01
-Wed Nov 02 16:09:29 2022
+Tue Nov 15 11:30:31 2022
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -62,7 +62,7 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Fitter Summary                                                                   ;
 +------------------------------------+---------------------------------------------+
-; Fitter Status                      ; Successful - Wed Nov 02 16:09:29 2022       ;
+; Fitter Status                      ; Successful - Tue Nov 15 11:30:31 2022       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; lab4_01                                     ;
 ; Top-level Entity Name              ; lab4_01                                     ;
@@ -1339,12 +1339,12 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ;      - alu:\G1:0:G3:compute2|Mux0~1 ; 0                 ; 6       ;
 ; Ctrol[2]                            ;                   ;         ;
 ;      - alu:\G1:0:G3:compute2|Cout~0 ; 0                 ; 6       ;
-;      - alu:\G1:1:G2:compute1|bt~0   ; 0                 ; 6       ;
-;      - alu:\G1:2:G2:compute1|bt~0   ; 0                 ; 6       ;
-;      - alu:\G1:3:G2:compute1|bt~0   ; 0                 ; 6       ;
-;      - alu:\G1:4:G2:compute1|bt~0   ; 0                 ; 6       ;
-;      - alu:\G1:5:G2:compute1|bt~0   ; 0                 ; 6       ;
-;      - alu:\G1:6:G2:compute1|bt~0   ; 0                 ; 6       ;
+;      - alu:\G1:1:G2:compute1|Bt~0   ; 0                 ; 6       ;
+;      - alu:\G1:2:G2:compute1|Bt~0   ; 0                 ; 6       ;
+;      - alu:\G1:3:G2:compute1|Bt~0   ; 0                 ; 6       ;
+;      - alu:\G1:4:G2:compute1|Bt~0   ; 0                 ; 6       ;
+;      - alu:\G1:5:G2:compute1|Bt~0   ; 0                 ; 6       ;
+;      - alu:\G1:6:G2:compute1|Bt~0   ; 0                 ; 6       ;
 ;      - alu:\G1:0:G3:compute2|Mux0~2 ; 0                 ; 6       ;
 ; Ctrol[0]                            ;                   ;         ;
 ;      - alu:\G1:1:G2:compute1|Mux0~1 ; 1                 ; 6       ;
@@ -1372,21 +1372,21 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ;      - alu:\G1:1:G2:compute1|Cout~0 ; 0                 ; 6       ;
 ;      - alu:\G1:1:G2:compute1|Mux0~0 ; 0                 ; 6       ;
 ; B[1]                                ;                   ;         ;
-;      - alu:\G1:1:G2:compute1|bt~0   ; 0                 ; 6       ;
+;      - alu:\G1:1:G2:compute1|Bt~0   ; 0                 ; 6       ;
 ; B[2]                                ;                   ;         ;
-;      - alu:\G1:2:G2:compute1|bt~0   ; 0                 ; 6       ;
+;      - alu:\G1:2:G2:compute1|Bt~0   ; 0                 ; 6       ;
 ; B[3]                                ;                   ;         ;
-;      - alu:\G1:3:G2:compute1|bt~0   ; 0                 ; 6       ;
+;      - alu:\G1:3:G2:compute1|Bt~0   ; 0                 ; 6       ;
 ; B[4]                                ;                   ;         ;
-;      - alu:\G1:4:G2:compute1|bt~0   ; 0                 ; 6       ;
+;      - alu:\G1:4:G2:compute1|Bt~0   ; 0                 ; 6       ;
 ; B[5]                                ;                   ;         ;
-;      - alu:\G1:5:G2:compute1|bt~0   ; 1                 ; 6       ;
+;      - alu:\G1:5:G2:compute1|Bt~0   ; 1                 ; 6       ;
 ; A[6]                                ;                   ;         ;
 ;      - alu:\G1:6:G2:compute1|set    ; 1                 ; 6       ;
 ;      - alu:\G1:6:G2:compute1|Mux0~0 ; 1                 ; 6       ;
 ;      - alu:\G1:6:G2:compute1|Cout~0 ; 1                 ; 6       ;
 ; B[6]                                ;                   ;         ;
-;      - alu:\G1:6:G2:compute1|bt~0   ; 1                 ; 6       ;
+;      - alu:\G1:6:G2:compute1|Bt~0   ; 1                 ; 6       ;
 +-------------------------------------+-------------------+---------+
 
 
@@ -1676,7 +1676,7 @@ Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were
     Info (170201): Optimizations that may affect the design's routability were skipped
     Info (170200): Optimizations that may affect the design's timing were skipped
 Info (170194): Fitter routing operations ending: elapsed time is 00:00:00
-Info (11888): Total time spent on timing analysis during the Fitter is 0.04 seconds.
+Info (11888): Total time spent on timing analysis during the Fitter is 0.03 seconds.
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (334003): Started post-fitting delay annotation
@@ -1684,9 +1684,9 @@ Info (334004): Delay annotation completed successfully
 Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:00
 Info (144001): Generated suppressed messages file D:/vhdl/lab4/output_files/lab4_01.fit.smsg
 Info: Quartus Prime Fitter was successful. 0 errors, 6 warnings
-    Info: Peak virtual memory: 5712 megabytes
-    Info: Processing ended: Wed Nov 02 16:09:29 2022
-    Info: Elapsed time: 00:00:05
+    Info: Peak virtual memory: 5713 megabytes
+    Info: Processing ended: Tue Nov 15 11:30:31 2022
+    Info: Elapsed time: 00:00:03
     Info: Total CPU time (on all processors): 00:00:05
 
 

@@ -1,5 +1,5 @@
 Analysis & Synthesis report for lab2_02
-Mon Oct 03 17:38:00 2022
+Tue Nov 15 07:49:21 2022
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -43,7 +43,7 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Mon Oct 03 17:38:00 2022       ;
+; Analysis & Synthesis Status        ; Successful - Tue Nov 15 07:49:21 2022       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; lab2_02                                     ;
 ; Top-level Entity Name              ; lab2_02                                     ;
@@ -151,8 +151,8 @@ refer to the applicable agreement for further details.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 8           ;
-; Maximum allowed            ; 4           ;
+; Number detected on machine ; 12          ;
+; Maximum allowed            ; 6           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
 ; Maximum used               ; 1           ;
@@ -162,16 +162,16 @@ refer to the applicable agreement for further details.
 +----------------------------+-------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                   ;
-+----------------------------------+-----------------+-----------------+---------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                            ; Library ;
-+----------------------------------+-----------------+-----------------+---------------------------------------------------------+---------+
-; fullsub.vhd                      ; yes             ; User VHDL File  ; C:/intelFPGA_lite/18.1/lab2/lab2_02/fullsub.vhd         ;         ;
-; hex.vhd                          ; yes             ; User VHDL File  ; C:/intelFPGA_lite/18.1/lab2/lab2_02/hex.vhd             ;         ;
-; lab2_02_package.vhd              ; yes             ; User VHDL File  ; C:/intelFPGA_lite/18.1/lab2/lab2_02/lab2_02_package.vhd ;         ;
-; lab2_02.vhd                      ; yes             ; User VHDL File  ; C:/intelFPGA_lite/18.1/lab2/lab2_02/lab2_02.vhd         ;         ;
-+----------------------------------+-----------------+-----------------+---------------------------------------------------------+---------+
++---------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                    ;
++----------------------------------+-----------------+-----------------+------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path             ; Library ;
++----------------------------------+-----------------+-----------------+------------------------------------------+---------+
+; fullsub.vhd                      ; yes             ; User VHDL File  ; D:/vhdl/lab2/lab2_02/fullsub.vhd         ;         ;
+; hex.vhd                          ; yes             ; User VHDL File  ; D:/vhdl/lab2/lab2_02/hex.vhd             ;         ;
+; lab2_02_package.vhd              ; yes             ; User VHDL File  ; D:/vhdl/lab2/lab2_02/lab2_02_package.vhd ;         ;
+; lab2_02.vhd                      ; yes             ; User VHDL File  ; D:/vhdl/lab2/lab2_02/lab2_02.vhd         ;         ;
++----------------------------------+-----------------+-----------------+------------------------------------------+---------+
 
 
 +------------------------------------------------------------------+
@@ -281,25 +281,25 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Mon Oct 03 17:37:48 2022
+    Info: Processing started: Tue Nov 15 07:49:13 2022
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off lab2_02 -c lab2_02
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
 Info (12021): Found 2 design units, including 1 entities, in source file fullsub.vhd
-    Info (12022): Found design unit 1: fullsub-func File: C:/intelFPGA_lite/18.1/lab2/lab2_02/fullsub.vhd Line: 9
-    Info (12023): Found entity 1: fullsub File: C:/intelFPGA_lite/18.1/lab2/lab2_02/fullsub.vhd Line: 4
+    Info (12022): Found design unit 1: fullsub-func File: D:/vhdl/lab2/lab2_02/fullsub.vhd Line: 9
+    Info (12023): Found entity 1: fullsub File: D:/vhdl/lab2/lab2_02/fullsub.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file hex.vhd
-    Info (12022): Found design unit 1: hex-func File: C:/intelFPGA_lite/18.1/lab2/lab2_02/hex.vhd Line: 9
-    Info (12023): Found entity 1: hex File: C:/intelFPGA_lite/18.1/lab2/lab2_02/hex.vhd Line: 4
+    Info (12022): Found design unit 1: hex-func File: D:/vhdl/lab2/lab2_02/hex.vhd Line: 9
+    Info (12023): Found entity 1: hex File: D:/vhdl/lab2/lab2_02/hex.vhd Line: 4
 Info (12021): Found 1 design units, including 0 entities, in source file lab2_02_package.vhd
-    Info (12022): Found design unit 1: lab2_02_package File: C:/intelFPGA_lite/18.1/lab2/lab2_02/lab2_02_package.vhd Line: 3
+    Info (12022): Found design unit 1: lab2_02_package File: D:/vhdl/lab2/lab2_02/lab2_02_package.vhd Line: 3
 Info (12021): Found 2 design units, including 1 entities, in source file lab2_02.vhd
-    Info (12022): Found design unit 1: lab2_02-func File: C:/intelFPGA_lite/18.1/lab2/lab2_02/lab2_02.vhd Line: 11
-    Info (12023): Found entity 1: lab2_02 File: C:/intelFPGA_lite/18.1/lab2/lab2_02/lab2_02.vhd Line: 5
+    Info (12022): Found design unit 1: lab2_02-func File: D:/vhdl/lab2/lab2_02/lab2_02.vhd Line: 11
+    Info (12023): Found entity 1: lab2_02 File: D:/vhdl/lab2/lab2_02/lab2_02.vhd Line: 5
 Info (12127): Elaborating entity "lab2_02" for the top level hierarchy
-Warning (10873): Using initial value X (don't care) for net "b[0]" at lab2_02.vhd(12) File: C:/intelFPGA_lite/18.1/lab2/lab2_02/lab2_02.vhd Line: 12
-Info (12128): Elaborating entity "fullsub" for hierarchy "fullsub:stage0" File: C:/intelFPGA_lite/18.1/lab2/lab2_02/lab2_02.vhd Line: 15
-Info (12128): Elaborating entity "hex" for hierarchy "hex:stage8" File: C:/intelFPGA_lite/18.1/lab2/lab2_02/lab2_02.vhd Line: 23
+Warning (10873): Using initial value X (don't care) for net "b[0]" at lab2_02.vhd(12) File: D:/vhdl/lab2/lab2_02/lab2_02.vhd Line: 12
+Info (12128): Elaborating entity "fullsub" for hierarchy "fullsub:stage0" File: D:/vhdl/lab2/lab2_02/lab2_02.vhd Line: 15
+Info (12128): Elaborating entity "hex" for hierarchy "hex:stage8" File: D:/vhdl/lab2/lab2_02/lab2_02.vhd Line: 23
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
@@ -308,9 +308,9 @@ Info (21057): Implemented 61 device resources after synthesis - the final resour
     Info (21059): Implemented 15 output pins
     Info (21061): Implemented 30 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 3 warnings
-    Info: Peak virtual memory: 4796 megabytes
-    Info: Processing ended: Mon Oct 03 17:38:00 2022
-    Info: Elapsed time: 00:00:12
-    Info: Total CPU time (on all processors): 00:00:09
+    Info: Peak virtual memory: 4794 megabytes
+    Info: Processing ended: Tue Nov 15 07:49:21 2022
+    Info: Elapsed time: 00:00:08
+    Info: Total CPU time (on all processors): 00:00:15
 
 
