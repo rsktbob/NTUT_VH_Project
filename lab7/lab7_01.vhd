@@ -12,8 +12,8 @@ entity lab7_01 is
 	
 architecture func of lab7_01 is
 	signal r, d : std_logic_vector(15 downto 0);
+	signal times : integer range 0 to 8;
 	signal state : std_logic_vector(1 downto 0) := "00";
-	signal times : integer range 0 to 9;
 begin
 	remainder <= r(7 downto 0);
 	f1:hex port map(remainder(3 downto 0), hex0);
@@ -32,19 +32,18 @@ begin
 			else
 				case state is
 					when "00" =>
-						d(15 downto 8) <= divisor;
-						r(7 downto 0) <= dividend;
-						quotient <= "00000000";
-						state <= "01";
-						times <= 0;
 					when "01" =>
 						r <= r - d;
 						state <= "10";
 					when "10" =>
+						for i in 7 downto 1 loop
+							quotient(i) <= quotient(i-1);
+						end loop;
 						if r(15)='0' then
-							quotient <= quotient + '1';
+							quotient(0) <= '1';
 						elsif r(15)='1' then
 							r <= r + d;
+							quotient(0) <= '0';
 						end if;
 						state <= "11";
 					when "11" =>
@@ -52,10 +51,11 @@ begin
 							d(i) <= d(i+1);
 						end loop;
 						d(15) <= '0';
-							if times=9 then
+							if times=8 then
 								state <= "00";
 							else
 								state <= "01";
+								times <= times + 1;
 							end if;
 				end case;
 			end if;

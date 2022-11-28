@@ -1,5 +1,5 @@
 Analysis & Synthesis report for lab7_01
-Tue Nov 29 00:52:55 2022
+Tue Nov 29 07:16:48 2022
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -13,12 +13,11 @@ Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
   5. Analysis & Synthesis Source Files Read
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
-  8. Registers Removed During Synthesis
-  9. General Register Statistics
- 10. Multiplexer Restructuring Statistics (Restructuring Performed)
- 11. Post-Synthesis Netlist Statistics for Top Partition
- 12. Elapsed Time Per Partition
- 13. Analysis & Synthesis Messages
+  8. General Register Statistics
+  9. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 10. Post-Synthesis Netlist Statistics for Top Partition
+ 11. Elapsed Time Per Partition
+ 12. Analysis & Synthesis Messages
 
 
 
@@ -44,15 +43,15 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Tue Nov 29 00:52:55 2022       ;
+; Analysis & Synthesis Status        ; Successful - Tue Nov 29 07:16:48 2022       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; lab7_01                                     ;
 ; Top-level Entity Name              ; lab7_01                                     ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 103                                         ;
-;     Total combinational functions  ; 95                                          ;
-;     Dedicated logic registers      ; 42                                          ;
-; Total registers                    ; 42                                          ;
+; Total logic elements               ; 111                                         ;
+;     Total combinational functions  ; 103                                         ;
+;     Dedicated logic registers      ; 46                                          ;
+; Total registers                    ; 46                                          ;
 ; Total pins                         ; 62                                          ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0                                           ;
@@ -180,20 +179,20 @@ refer to the applicable agreement for further details.
 +---------------------------------------------+-----------+
 ; Resource                                    ; Usage     ;
 +---------------------------------------------+-----------+
-; Estimated Total logic elements              ; 103       ;
+; Estimated Total logic elements              ; 111       ;
 ;                                             ;           ;
-; Total combinational functions               ; 95        ;
+; Total combinational functions               ; 103       ;
 ; Logic element usage by number of LUT inputs ;           ;
-;     -- 4 input functions                    ; 39        ;
-;     -- 3 input functions                    ; 27        ;
-;     -- <=2 input functions                  ; 29        ;
+;     -- 4 input functions                    ; 38        ;
+;     -- 3 input functions                    ; 37        ;
+;     -- <=2 input functions                  ; 28        ;
 ;                                             ;           ;
 ; Logic elements by mode                      ;           ;
-;     -- normal mode                          ; 72        ;
-;     -- arithmetic mode                      ; 23        ;
+;     -- normal mode                          ; 87        ;
+;     -- arithmetic mode                      ; 16        ;
 ;                                             ;           ;
-; Total registers                             ; 42        ;
-;     -- Dedicated logic registers            ; 42        ;
+; Total registers                             ; 46        ;
+;     -- Dedicated logic registers            ; 46        ;
 ;     -- I/O registers                        ; 0         ;
 ;                                             ;           ;
 ; I/O pins                                    ; 62        ;
@@ -201,8 +200,8 @@ refer to the applicable agreement for further details.
 ; Embedded Multiplier 9-bit elements          ; 0         ;
 ;                                             ;           ;
 ; Maximum fan-out node                        ; clk~input ;
-; Maximum fan-out                             ; 42        ;
-; Total fan-out                               ; 534       ;
+; Maximum fan-out                             ; 46        ;
+; Total fan-out                               ; 559       ;
 ; Average fan-out                             ; 2.05      ;
 +---------------------------------------------+-----------+
 
@@ -212,7 +211,7 @@ refer to the applicable agreement for further details.
 +----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+-------------+--------------+
 ; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name ; Entity Name ; Library Name ;
 +----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+-------------+--------------+
-; |lab7_01                   ; 95 (67)             ; 42 (42)                   ; 0           ; 0            ; 0       ; 0         ; 62   ; 0            ; |lab7_01            ; lab7_01     ; work         ;
+; |lab7_01                   ; 103 (75)            ; 46 (46)                   ; 0           ; 0            ; 0       ; 0         ; 62   ; 0            ; |lab7_01            ; lab7_01     ; work         ;
 ;    |hex:f1|                ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |lab7_01|hex:f1     ; hex         ; work         ;
 ;    |hex:f2|                ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |lab7_01|hex:f2     ; hex         ; work         ;
 ;    |hex:f3|                ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |lab7_01|hex:f3     ; hex         ; work         ;
@@ -221,24 +220,13 @@ refer to the applicable agreement for further details.
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
-+--------------------------------------------------------------+
-; Registers Removed During Synthesis                           ;
-+---------------------------------------+----------------------+
-; Register name                         ; Reason for Removal   ;
-+---------------------------------------+----------------------+
-; times[1..3]                           ; Merged with times[0] ;
-; times[0]                              ; Lost fanout          ;
-; Total Number of Removed Registers = 4 ;                      ;
-+---------------------------------------+----------------------+
-
-
 +------------------------------------------------------+
 ; General Register Statistics                          ;
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 42    ;
-; Number of registers using Synchronous Clear  ; 9     ;
+; Total registers                              ; 46    ;
+; Number of registers using Synchronous Clear  ; 1     ;
 ; Number of registers using Synchronous Load   ; 2     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
@@ -252,10 +240,11 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
-; 5:1                ; 7 bits    ; 21 LEs        ; 7 LEs                ; 14 LEs                 ; Yes        ; |lab7_01|d[11]             ;
-; 5:1                ; 8 bits    ; 24 LEs        ; 8 LEs                ; 16 LEs                 ; Yes        ; |lab7_01|quotient[3]~reg0  ;
-; 5:1                ; 7 bits    ; 21 LEs        ; 0 LEs                ; 21 LEs                 ; Yes        ; |lab7_01|r[14]             ;
-; 6:1                ; 8 bits    ; 32 LEs        ; 8 LEs                ; 24 LEs                 ; Yes        ; |lab7_01|r[3]              ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |lab7_01|quotient[0]~reg0  ;
+; 3:1                ; 7 bits    ; 14 LEs        ; 7 LEs                ; 7 LEs                  ; Yes        ; |lab7_01|d[8]              ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |lab7_01|times[1]          ;
+; 5:1                ; 7 bits    ; 21 LEs        ; 0 LEs                ; 21 LEs                 ; Yes        ; |lab7_01|r[10]             ;
+; 6:1                ; 8 bits    ; 32 LEs        ; 8 LEs                ; 24 LEs                 ; Yes        ; |lab7_01|r[0]              ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
 
 
@@ -265,24 +254,23 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
 ; boundary_port         ; 62                          ;
-; cycloneiii_ff         ; 42                          ;
-;     ENA               ; 30                          ;
-;     ENA SCLR          ; 8                           ;
+; cycloneiii_ff         ; 46                          ;
+;     ENA               ; 38                          ;
 ;     SCLR              ; 1                           ;
 ;     SLD               ; 2                           ;
-;     plain             ; 1                           ;
-; cycloneiii_lcell_comb ; 99                          ;
-;     arith             ; 23                          ;
-;         2 data inputs ; 7                           ;
-;         3 data inputs ; 16                          ;
-;     normal            ; 76                          ;
-;         1 data inputs ; 5                           ;
-;         2 data inputs ; 21                          ;
-;         3 data inputs ; 11                          ;
-;         4 data inputs ; 39                          ;
+;     plain             ; 5                           ;
+; cycloneiii_lcell_comb ; 107                         ;
+;     arith             ; 16                          ;
+;         2 data inputs ; 1                           ;
+;         3 data inputs ; 15                          ;
+;     normal            ; 91                          ;
+;         1 data inputs ; 4                           ;
+;         2 data inputs ; 27                          ;
+;         3 data inputs ; 22                          ;
+;         4 data inputs ; 38                          ;
 ;                       ;                             ;
 ; Max LUT depth         ; 4.50                        ;
-; Average LUT depth     ; 2.45                        ;
+; Average LUT depth     ; 2.48                        ;
 +-----------------------+-----------------------------+
 
 
@@ -301,7 +289,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Tue Nov 29 00:52:46 2022
+    Info: Processing started: Tue Nov 29 07:16:40 2022
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off lab7_01 -c lab7_01
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
@@ -316,17 +304,16 @@ Info (12021): Found 1 design units, including 0 entities, in source file lab7_01
 Info (12127): Elaborating entity "lab7_01" for the top level hierarchy
 Info (12128): Elaborating entity "hex" for hierarchy "hex:f1" File: D:/vhdl/lab7/lab7_01.vhd Line: 19
 Info (286030): Timing-Driven Synthesis is running
-Info (17049): 1 registers lost all their fanouts during netlist optimizations.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 165 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 173 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 18 input pins
     Info (21059): Implemented 44 output pins
-    Info (21061): Implemented 103 logic cells
+    Info (21061): Implemented 111 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 2 warnings
-    Info: Peak virtual memory: 4819 megabytes
-    Info: Processing ended: Tue Nov 29 00:52:55 2022
-    Info: Elapsed time: 00:00:09
+    Info: Peak virtual memory: 4816 megabytes
+    Info: Processing ended: Tue Nov 29 07:16:48 2022
+    Info: Elapsed time: 00:00:08
     Info: Total CPU time (on all processors): 00:00:16
 
 
