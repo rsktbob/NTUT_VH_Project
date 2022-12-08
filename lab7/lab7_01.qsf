@@ -18,7 +18,7 @@
 #
 # Quartus Prime
 # Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-# Date created = 20:06:35  November 28, 2022
+# Date created = 12:46:17  December 07, 2022
 #
 # -------------------------------------------------------------------------- #
 #
@@ -40,7 +40,7 @@ set_global_assignment -name FAMILY "Cyclone IV E"
 set_global_assignment -name DEVICE EP4CE115F29C7
 set_global_assignment -name TOP_LEVEL_ENTITY lab7_01
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION 18.1.0
-set_global_assignment -name PROJECT_CREATION_TIME_DATE "20:06:35  NOVEMBER 28, 2022"
+set_global_assignment -name PROJECT_CREATION_TIME_DATE "12:46:17  DECEMBER 07, 2022"
 set_global_assignment -name LAST_QUARTUS_VERSION "18.1.0 Lite Edition"
 set_global_assignment -name PROJECT_OUTPUT_DIRECTORY output_files
 set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
@@ -53,5 +53,74 @@ set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
 set_global_assignment -name VHDL_FILE lab7_01_package.vhd
-set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform.vwf
+set_location_assignment PIN_AA22 -to dividend[7]
+set_location_assignment PIN_AA23 -to dividend[6]
+set_location_assignment PIN_AA24 -to dividend[5]
+set_location_assignment PIN_AB23 -to dividend[4]
+set_location_assignment PIN_AB24 -to dividend[3]
+set_location_assignment PIN_AC24 -to dividend[2]
+set_location_assignment PIN_AB25 -to dividend[1]
+set_location_assignment PIN_AC25 -to dividend[0]
+set_location_assignment PIN_AB26 -to divisor[7]
+set_location_assignment PIN_AD26 -to divisor[6]
+set_location_assignment PIN_AC26 -to divisor[5]
+set_location_assignment PIN_AB27 -to divisor[4]
+set_location_assignment PIN_AD27 -to divisor[3]
+set_location_assignment PIN_AC27 -to divisor[2]
+set_location_assignment PIN_AC28 -to divisor[1]
+set_location_assignment PIN_AB28 -to divisor[0]
+set_location_assignment PIN_M23 -to clk
+set_location_assignment PIN_G18 -to hex0[6]
+set_location_assignment PIN_F22 -to hex0[5]
+set_location_assignment PIN_E17 -to hex0[4]
+set_location_assignment PIN_L26 -to hex0[3]
+set_location_assignment PIN_L25 -to hex0[2]
+set_location_assignment PIN_J22 -to hex0[1]
+set_location_assignment PIN_H22 -to hex0[0]
+set_location_assignment PIN_M24 -to hex1[6]
+set_location_assignment PIN_Y22 -to hex1[5]
+set_location_assignment PIN_W21 -to hex1[4]
+set_location_assignment PIN_W22 -to hex1[3]
+set_location_assignment PIN_W25 -to hex1[2]
+set_location_assignment PIN_U23 -to hex1[1]
+set_location_assignment PIN_U24 -to hex1[0]
+set_location_assignment PIN_AA25 -to hex2[6]
+set_location_assignment PIN_AA26 -to hex2[5]
+set_location_assignment PIN_Y25 -to hex2[4]
+set_location_assignment PIN_W26 -to hex2[3]
+set_location_assignment PIN_Y26 -to hex2[2]
+set_location_assignment PIN_W27 -to hex2[1]
+set_location_assignment PIN_W28 -to hex2[0]
+set_location_assignment PIN_V21 -to hex3[6]
+set_location_assignment PIN_U21 -to hex3[5]
+set_location_assignment PIN_AB20 -to hex3[4]
+set_location_assignment PIN_AA21 -to hex3[3]
+set_location_assignment PIN_AD24 -to hex3[2]
+set_location_assignment PIN_AF23 -to hex3[1]
+set_location_assignment PIN_Y19 -to hex3[0]
+set_location_assignment PIN_H19 -to quotient[7]
+set_location_assignment PIN_J19 -to quotient[6]
+set_location_assignment PIN_E18 -to quotient[5]
+set_location_assignment PIN_F18 -to quotient[4]
+set_location_assignment PIN_F21 -to quotient[3]
+set_location_assignment PIN_E19 -to quotient[2]
+set_location_assignment PIN_F19 -to quotient[1]
+set_location_assignment PIN_G19 -to quotient[0]
+set_location_assignment PIN_G15 -to remainder[7]
+set_location_assignment PIN_F15 -to remainder[6]
+set_location_assignment PIN_H17 -to remainder[5]
+set_location_assignment PIN_J16 -to remainder[4]
+set_location_assignment PIN_H16 -to remainder[3]
+set_location_assignment PIN_J15 -to remainder[2]
+set_location_assignment PIN_G17 -to remainder[1]
+set_location_assignment PIN_J17 -to remainder[0]
+set_location_assignment PIN_Y24 -to reset
+set_location_assignment PIN_G21 -to remainder[15]
+set_location_assignment PIN_G22 -to remainder[14]
+set_location_assignment PIN_G20 -to remainder[13]
+set_location_assignment PIN_H21 -to remainder[12]
+set_location_assignment PIN_E24 -to remainder[11]
+set_location_assignment PIN_E25 -to remainder[10]
+set_location_assignment PIN_E22 -to remainder[9]
+set_location_assignment PIN_E21 -to remainder[8]
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

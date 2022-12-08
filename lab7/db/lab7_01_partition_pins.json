@@ -68,6 +68,38 @@
 					"strict" : false
 				},
 				{
+					"name" : "remainder[8]",
+					"strict" : false
+				},
+				{
+					"name" : "remainder[9]",
+					"strict" : false
+				},
+				{
+					"name" : "remainder[10]",
+					"strict" : false
+				},
+				{
+					"name" : "remainder[11]",
+					"strict" : false
+				},
+				{
+					"name" : "remainder[12]",
+					"strict" : false
+				},
+				{
+					"name" : "remainder[13]",
+					"strict" : false
+				},
+				{
+					"name" : "remainder[14]",
+					"strict" : false
+				},
+				{
+					"name" : "remainder[15]",
+					"strict" : false
+				},
+				{
 					"name" : "hex0[0]",
 					"strict" : false
 				},
@@ -180,11 +212,11 @@
 					"strict" : false
 				},
 				{
-					"name" : "reset",
+					"name" : "clk",
 					"strict" : false
 				},
 				{
-					"name" : "clk",
+					"name" : "reset",
 					"strict" : false
 				},
 				{
@@ -220,27 +252,7 @@
 					"strict" : false
 				},
 				{
-					"name" : "divisor[7]",
-					"strict" : false
-				},
-				{
-					"name" : "divisor[6]",
-					"strict" : false
-				},
-				{
-					"name" : "divisor[5]",
-					"strict" : false
-				},
-				{
-					"name" : "divisor[4]",
-					"strict" : false
-				},
-				{
-					"name" : "divisor[3]",
-					"strict" : false
-				},
-				{
-					"name" : "divisor[2]",
+					"name" : "divisor[0]",
 					"strict" : false
 				},
 				{
@@ -248,7 +260,27 @@
 					"strict" : false
 				},
 				{
-					"name" : "divisor[0]",
+					"name" : "divisor[2]",
+					"strict" : false
+				},
+				{
+					"name" : "divisor[3]",
+					"strict" : false
+				},
+				{
+					"name" : "divisor[4]",
+					"strict" : false
+				},
+				{
+					"name" : "divisor[5]",
+					"strict" : false
+				},
+				{
+					"name" : "divisor[6]",
+					"strict" : false
+				},
+				{
+					"name" : "divisor[7]",
 					"strict" : false
 				}
 			]
