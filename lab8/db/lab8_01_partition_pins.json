@@ -4,211 +4,199 @@
 			"name" : "Top",
 			"pins" : [
 				{
-					"name" : "quotient[0]",
+					"name" : "Rs_seg0[0]",
 					"strict" : false
 				},
 				{
-					"name" : "quotient[1]",
+					"name" : "Rs_seg0[1]",
 					"strict" : false
 				},
 				{
-					"name" : "quotient[2]",
+					"name" : "Rs_seg0[2]",
 					"strict" : false
 				},
 				{
-					"name" : "quotient[3]",
+					"name" : "Rs_seg0[3]",
 					"strict" : false
 				},
 				{
-					"name" : "quotient[4]",
+					"name" : "Rs_seg0[4]",
 					"strict" : false
 				},
 				{
-					"name" : "quotient[5]",
+					"name" : "Rs_seg0[5]",
 					"strict" : false
 				},
 				{
-					"name" : "quotient[6]",
+					"name" : "Rs_seg0[6]",
 					"strict" : false
 				},
 				{
-					"name" : "quotient[7]",
+					"name" : "Rs_seg1[0]",
 					"strict" : false
 				},
 				{
-					"name" : "remainder[0]",
+					"name" : "Rs_seg1[1]",
 					"strict" : false
 				},
 				{
-					"name" : "remainder[1]",
+					"name" : "Rs_seg1[2]",
 					"strict" : false
 				},
 				{
-					"name" : "remainder[2]",
+					"name" : "Rs_seg1[3]",
 					"strict" : false
 				},
 				{
-					"name" : "remainder[3]",
+					"name" : "Rs_seg1[4]",
 					"strict" : false
 				},
 				{
-					"name" : "remainder[4]",
+					"name" : "Rs_seg1[5]",
 					"strict" : false
 				},
 				{
-					"name" : "remainder[5]",
+					"name" : "Rs_seg1[6]",
 					"strict" : false
 				},
 				{
-					"name" : "remainder[6]",
+					"name" : "Rt_seg0[0]",
 					"strict" : false
 				},
 				{
-					"name" : "remainder[7]",
+					"name" : "Rt_seg0[1]",
 					"strict" : false
 				},
 				{
-					"name" : "remainder[8]",
+					"name" : "Rt_seg0[2]",
 					"strict" : false
 				},
 				{
-					"name" : "remainder[9]",
+					"name" : "Rt_seg0[3]",
 					"strict" : false
 				},
 				{
-					"name" : "remainder[10]",
+					"name" : "Rt_seg0[4]",
 					"strict" : false
 				},
 				{
-					"name" : "remainder[11]",
+					"name" : "Rt_seg0[5]",
 					"strict" : false
 				},
 				{
-					"name" : "remainder[12]",
+					"name" : "Rt_seg0[6]",
 					"strict" : false
 				},
 				{
-					"name" : "remainder[13]",
+					"name" : "Rt_seg1[0]",
 					"strict" : false
 				},
 				{
-					"name" : "remainder[14]",
+					"name" : "Rt_seg1[1]",
 					"strict" : false
 				},
 				{
-					"name" : "remainder[15]",
+					"name" : "Rt_seg1[2]",
 					"strict" : false
 				},
 				{
-					"name" : "hex0[0]",
+					"name" : "Rt_seg1[3]",
 					"strict" : false
 				},
 				{
-					"name" : "hex0[1]",
+					"name" : "Rt_seg1[4]",
 					"strict" : false
 				},
 				{
-					"name" : "hex0[2]",
+					"name" : "Rt_seg1[5]",
 					"strict" : false
 				},
 				{
-					"name" : "hex0[3]",
+					"name" : "Rt_seg1[6]",
 					"strict" : false
 				},
 				{
-					"name" : "hex0[4]",
+					"name" : "Data_seg0[0]",
 					"strict" : false
 				},
 				{
-					"name" : "hex0[5]",
+					"name" : "Data_seg0[1]",
 					"strict" : false
 				},
 				{
-					"name" : "hex0[6]",
+					"name" : "Data_seg0[2]",
 					"strict" : false
 				},
 				{
-					"name" : "hex1[0]",
+					"name" : "Data_seg0[3]",
 					"strict" : false
 				},
 				{
-					"name" : "hex1[1]",
+					"name" : "Data_seg0[4]",
 					"strict" : false
 				},
 				{
-					"name" : "hex1[2]",
+					"name" : "Data_seg0[5]",
 					"strict" : false
 				},
 				{
-					"name" : "hex1[3]",
+					"name" : "Data_seg0[6]",
 					"strict" : false
 				},
 				{
-					"name" : "hex1[4]",
+					"name" : "Data_seg1[0]",
 					"strict" : false
 				},
 				{
-					"name" : "hex1[5]",
+					"name" : "Data_seg1[1]",
 					"strict" : false
 				},
 				{
-					"name" : "hex1[6]",
+					"name" : "Data_seg1[2]",
 					"strict" : false
 				},
 				{
-					"name" : "hex2[0]",
+					"name" : "Data_seg1[3]",
 					"strict" : false
 				},
 				{
-					"name" : "hex2[1]",
+					"name" : "Data_seg1[4]",
 					"strict" : false
 				},
 				{
-					"name" : "hex2[2]",
+					"name" : "Data_seg1[5]",
 					"strict" : false
 				},
 				{
-					"name" : "hex2[3]",
+					"name" : "Data_seg1[6]",
 					"strict" : false
 				},
 				{
-					"name" : "hex2[4]",
+					"name" : "Rs[0]",
 					"strict" : false
 				},
 				{
-					"name" : "hex2[5]",
+					"name" : "Rs[1]",
 					"strict" : false
 				},
 				{
-					"name" : "hex2[6]",
+					"name" : "op[3]",
 					"strict" : false
 				},
 				{
-					"name" : "hex3[0]",
+					"name" : "op[1]",
 					"strict" : false
 				},
 				{
-					"name" : "hex3[1]",
+					"name" : "op[0]",
 					"strict" : false
 				},
 				{
-					"name" : "hex3[2]",
+					"name" : "op[2]",
 					"strict" : false
 				},
 				{
-					"name" : "hex3[3]",
-					"strict" : false
-				},
-				{
-					"name" : "hex3[4]",
-					"strict" : false
-				},
-				{
-					"name" : "hex3[5]",
-					"strict" : false
-				},
-				{
-					"name" : "hex3[6]",
+					"name" : "Data[0]",
 					"strict" : false
 				},
 				{
@@ -216,71 +204,39 @@
 					"strict" : false
 				},
 				{
-					"name" : "reset",
+					"name" : "Data[1]",
 					"strict" : false
 				},
 				{
-					"name" : "dividend[0]",
+					"name" : "Data[2]",
 					"strict" : false
 				},
 				{
-					"name" : "dividend[1]",
+					"name" : "Data[3]",
 					"strict" : false
 				},
 				{
-					"name" : "dividend[2]",
+					"name" : "Data[4]",
 					"strict" : false
 				},
 				{
-					"name" : "dividend[3]",
+					"name" : "Data[5]",
 					"strict" : false
 				},
 				{
-					"name" : "dividend[4]",
+					"name" : "Data[6]",
 					"strict" : false
 				},
 				{
-					"name" : "dividend[5]",
+					"name" : "Data[7]",
 					"strict" : false
 				},
 				{
-					"name" : "dividend[6]",
+					"name" : "Rt[0]",
 					"strict" : false
 				},
 				{
-					"name" : "dividend[7]",
-					"strict" : false
-				},
-				{
-					"name" : "divisor[0]",
-					"strict" : false
-				},
-				{
-					"name" : "divisor[1]",
-					"strict" : false
-				},
-				{
-					"name" : "divisor[2]",
-					"strict" : false
-				},
-				{
-					"name" : "divisor[3]",
-					"strict" : false
-				},
-				{
-					"name" : "divisor[4]",
-					"strict" : false
-				},
-				{
-					"name" : "divisor[5]",
-					"strict" : false
-				},
-				{
-					"name" : "divisor[6]",
-					"strict" : false
-				},
-				{
-					"name" : "divisor[7]",
+					"name" : "Rt[1]",
 					"strict" : false
 				}
 			]

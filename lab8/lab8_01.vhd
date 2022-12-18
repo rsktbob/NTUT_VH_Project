@@ -3,73 +3,93 @@ use ieee.std_logic_1164.all;
 use ieee.std_logic_unsigned.all;
 use work.lab8_01_package.all;
 
-entity lab8_01 is
-	port ( clk, reset : in std_logic;
-			divisor, dividend : in std_logic_vector(7 downto 0);
-			quotient : buffer std_logic_vector(7 downto 0);
-			remainder : buffer std_logic_vector(15 downto 0);
-			hex0, hex1, hex2, hex3 : out std_logic_vector(6 downto 0));
-	end;
-	
+entity lab8_01 is 
+	port ( clk : in std_logic;
+			op : in std_logic_vector(3 downto 0);
+			Data : in std_logic_vector(7 downto 0);
+			Rs, Rt : in std_logic_vector(1 downto 0);
+			Rs_seg0, Rs_seg1, Rt_seg0, Rt_seg1, Data_seg0, Data_seg1 : buffer std_logic_vector(6 downto 0));
+end;
+
 architecture func of lab8_01 is
-	signal state : std_logic_vector(2 downto 0) := "000";
-	signal times : integer range 0 to 8;
+	signal Data_sel, Rs_sel, Rt_sel, R3, R2, R1, R0 : std_logic_vector(7 downto 0) := "00000000";
 begin
-	f1:hex port map(remainder(3 downto 0), hex0);
-	f2:hex port map(remainder(7 downto 4), hex1);
-	f3:hex port map(quotient(3 downto 0), hex2);
-	f4:hex port map(quotient(7 downto 4), hex3);
+	f1 : hex port map(Rs_sel(3 downto 0), Rs_seg0);
+	f2 : hex port map(Rs_sel(7 downto 4), Rs_seg1);
+	f3 : hex port map(Rt_sel(3 downto 0), Rt_seg0);
+	f4 : hex port map(Rt_sel(7 downto 4), Rt_seg1);
+	f5 : hex port map(Data_sel(3 downto 0), Data_seg0);
+	f6 : hex port map(Data_sel(7 downto 4), Data_seg1);
 	process(clk)
-		variable r, d : std_logic_vector(15 downto 0);
 	begin
-		remainder <= r(15 downto 0);
 		if rising_edge(clk) then
-			if reset='1' then
-				state <= "000";
-			else
-				case state is
-					when "000" =>
-						d(15 downto 8) := divisor;
-						d(7 downto 0) := "00000000";
-						r(15 downto 8) := "00000000";
-						r(7 downto 0) := dividend;
-						quotient <= "00000000";
-						times <= 0;
-						state <= "001";
-					when "001" =>
-						r := r - d;
-						if r(15)='0' then
-							state <= "010";
-						elsif r(15) = '1' then
-							state <= "011";
-						end if;
-					when "010" =>
-						for i in 7 downto 1 loop
-							quotient(i) <= quotient(i-1);
-						end loop;
-						quotient(0) <= '1';
-						state <= "100";
-					when "011" =>
-						r := r + d;
-						for i in 7 downto 1 loop
-							quotient(i) <= quotient(i-1);
-						end loop;
-						quotient(0) <= '0';
-						state <= "100";
-					when "100" =>
-						for i in 0 to 14 loop
-							d(i) := d(i+1);
-						end loop;
-						d(15) := '0';
-						if times=8 then
-							state <= "101";
-						else
-							state <= "001";
-							times <= times + 1;
-						end if;
-					when others =>
-				end case;
-			end if;
+			Data_sel <= Data;
+			case Rs is
+				when "00" =>
+					Rs_sel <= R0;
+				when "01" =>
+					Rs_sel <= R1;
+				when "10" =>
+					Rs_sel <= R2;
+				when "11" =>
+					Rs_sel <= R3;
+			end case;
+			case Rt is
+				when "00" =>
+					Rt_sel <= R0;
+				when "01" =>
+					Rt_sel <= R1;
+				when "10" =>
+					Rt_sel <= R2;
+				when "11" =>
+					Rt_sel <= R3;
+			end case;
+			case op is
+				when "0000" =>
+					Rs_sel <= Data;
+				when "0001" =>
+					Rs_sel <= Rt_sel;
+				when "0010" =>
+					Rs_sel <= Rs_sel + Rt_sel;
+				when "0011" =>
+					Rs_sel <= Rs_sel and Rt_sel;
+				when "0101" =>
+					Rs_sel <= Rs_sel - Rt_sel;
+				when "1001" =>
+					Rs_sel <= Rt_sel - Rs_sel;
+				when "0100" =>
+					if (Rs_sel < Rt_sel) then
+						Rs_sel <= "00000001";
+					else
+						Rs_sel <= "00000000";
+					end if;
+				when others =>
+			end case;
+			case Rs is
+				when "00" =>
+					R0 <= Rs_sel;
+				when "01" =>
+					R1 <= Rs_sel;
+				when "10" =>
+					R2 <= Rs_sel;
+				when "11" =>
+					R3 <= Rs_sel;
+			end case;
+			case Rt is
+				when "00" =>
+					R0 <= Rt_sel;
+				when "01" =>
+					R1 <= Rt_sel;
+				when "10" =>
+					R2 <= Rt_sel;
+				when "11" =>
+					R3 <= Rt_sel;
+			end case;
 		end if;
 	end process;
 end;
+	
+		
+		
+		
+	

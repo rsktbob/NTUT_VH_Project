@@ -1,7 +1,7 @@
 onerror {exit -code 1}
 vlib work
 vcom -work work lab8_01.vho
-vcom -work work Waveform.vwf.vht
+vcom -work work Waveform1.vwf.vht
 vsim -novopt -c -t 1ps -L cycloneive -L altera -L altera_mf -L 220model -L sgate -L altera_lnsim work.lab8_01_vhd_vec_tst
 vcd file -direction lab8_01.msim.vcd
 vcd add -internal lab8_01_vhd_vec_tst/*
@@ -15,6 +15,3 @@ proc simTimestamp {} {
 after 2500 simTimestamp
 run -all
 quit -f
-
-
-

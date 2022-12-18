@@ -9,7 +9,7 @@ z2
 cModel Technology
 Z0 dD:/vhdl/lab8/simulation/qsim
 Ehard_block
-Z1 w1670388203
+Z1 w1671349681
 Z2 DPx4 ieee 16 vital_primitives 0 22 G>kiXP8Q9dRClKfK1Zn7j1
 Z3 DPx10 cycloneive 20 cycloneive_atom_pack 0 22 g8;l:a_bzlE?3R3d7zk3Z0
 Z4 DPx4 ieee 12 vital_timing 0 22 J>EBealN09f8GzldA[z2>3
@@ -25,9 +25,9 @@ VOgIg9T_BR7joedFDVM>H13
 !s100 A`ID_i56<Ua56=ZD=[EG=2
 Z10 OV;C;10.5b;63
 32
-Z11 !s110 1670388203
+Z11 !s110 1671349681
 !i10b 1
-Z12 !s108 1670388203.000000
+Z12 !s108 1671349681.000000
 Z13 !s90 -work|work|lab8_01.vho|
 Z14 !s107 lab8_01.vho|
 !i113 1
@@ -70,8 +70,8 @@ R8
 R9
 l0
 L79
-VX@APSIH=J^N?E^R@FffQU2
-!s100 E>]2o4knDH1YdD[]ZS<L[1
+V4@WKz4O:]j6AV1J2_AdVf0
+!s100 PX3hJ8Jc04RIPL_k`1j=51
 R10
 32
 R11
@@ -91,11 +91,11 @@ R4
 R5
 R6
 R18
-DEx4 work 7 lab8_01 0 22 X@APSIH=J^N?E^R@FffQU2
-l429
-L167
-VB13fdNMk2Tz^CN[_HJShg1
-!s100 C`2FZb=MJBGRQmYFBhj2?3
+DEx4 work 7 lab8_01 0 22 4@WKz4O:]j6AV1J2_AdVf0
+l457
+L157
+VH9<AonaYH<mlLZa_?VX?`3
+!s100 IMY_6RjY6b4f[FCbdNoJH0
 R10
 32
 R11
@@ -107,12 +107,12 @@ R14
 R15
 R16
 Elab8_01_vhd_vec_tst
-Z19 w1670388202
+Z19 w1671349680
 R5
 R6
 R0
-Z20 8Waveform.vwf.vht
-Z21 FWaveform.vwf.vht
+Z20 8Waveform1.vwf.vht
+Z21 FWaveform1.vwf.vht
 l0
 L31
 VehE>jZfTDX6VT3=jIz7IT2
@@ -122,8 +122,8 @@ R10
 R11
 !i10b 1
 R12
-Z22 !s90 -work|work|Waveform.vwf.vht|
-Z23 !s107 Waveform.vwf.vht|
+Z22 !s90 -work|work|Waveform1.vwf.vht|
+Z23 !s107 Waveform1.vwf.vht|
 !i113 1
 R15
 R16
@@ -131,10 +131,10 @@ Alab8_01_arch
 R5
 R6
 Z24 DEx4 work 19 lab8_01_vhd_vec_tst 0 22 ehE>jZfTDX6VT3=jIz7IT2
-l60
+l62
 L33
-V;dZM1eTEQEWz^k;H`_;RY1
-!s100 PEfaBKeHQ2]aFj_b233CI3
+V]^V=dI7^nXI>lHKn79IcU2
+!s100 _BLR[ETj3Pin8[g:6XUih2
 R10
 32
 R11
