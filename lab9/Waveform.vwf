@@ -20,6 +20,8 @@ proc simTimestamp {} {
 after 2500 simTimestamp
 run -all
 quit -f
+
+
 </modelsim_script>
 <modelsim_script_timing>onerror {exit -code 1}
 vlib work
@@ -38,6 +40,8 @@ proc simTimestamp {} {
 after 2500 simTimestamp
 run -all
 quit -f
+
+
 </modelsim_script_timing>
 <hdl_lang>vhdl</hdl_lang>
 </simulation_settings>*/
@@ -225,6 +229,46 @@ SIGNAL("sw[0]")
 	PARENT = "sw";
 }
 
+SIGNAL("counter1_clk1hz")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "";
+}
+
+SIGNAL("counter1_clk50Mhz")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "";
+}
+
+SIGNAL("counter2_clk1hz")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "";
+}
+
+SIGNAL("counter2_clk50Mhz")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "";
+}
+
 TRANSITION_LIST("clk_50Mhz")
 {
 	NODE
@@ -232,10 +276,11 @@ TRANSITION_LIST("clk_50Mhz")
 		REPEAT = 1;
 		NODE
 		{
-			REPEAT = 50;
-			LEVEL 0 FOR 10.0;
-			LEVEL 1 FOR 10.0;
+			REPEAT = 12;
+			LEVEL 0 FOR 40.0;
+			LEVEL 1 FOR 40.0;
 		}
+		LEVEL 0 FOR 40.0;
 	}
 }
 
@@ -344,6 +389,42 @@ TRANSITION_LIST("sw[0]")
 	{
 		REPEAT = 1;
 		LEVEL 0 FOR 1000.0;
+	}
+}
+
+TRANSITION_LIST("counter1_clk1hz")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL X FOR 1000.0;
+	}
+}
+
+TRANSITION_LIST("counter1_clk50Mhz")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL X FOR 1000.0;
+	}
+}
+
+TRANSITION_LIST("counter2_clk1hz")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL X FOR 1000.0;
+	}
+}
+
+TRANSITION_LIST("counter2_clk50Mhz")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL X FOR 1000.0;
 	}
 }
 
@@ -493,6 +574,42 @@ DISPLAY_LINE
 	TREE_INDEX = 14;
 	TREE_LEVEL = 1;
 	PARENT = 11;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "counter1_clk1hz";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 15;
+	TREE_LEVEL = 0;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "counter1_clk50Mhz";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 16;
+	TREE_LEVEL = 0;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "counter2_clk1hz";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 17;
+	TREE_LEVEL = 0;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "counter2_clk50Mhz";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 18;
+	TREE_LEVEL = 0;
 }
 
 TIME_BAR

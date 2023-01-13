@@ -1,5 +1,5 @@
 Analysis & Synthesis report for lab9_01
-Fri Jan 13 08:54:37 2023
+Fri Jan 13 13:14:05 2023
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -13,16 +13,32 @@ Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
   5. Analysis & Synthesis Source Files Read
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
-  8. Registers Removed During Synthesis
-  9. Removed Registers Triggering Further Register Optimizations
+  8. User-Specified and Inferred Latches
+  9. Registers Removed During Synthesis
  10. General Register Statistics
  11. Source assignments for Top-level Entity: |lab9_01
- 12. Port Connectivity Checks: "comparator:p1"
- 13. Port Connectivity Checks: "counter:s2"
- 14. Port Connectivity Checks: "counter:s1"
- 15. Post-Synthesis Netlist Statistics for Top Partition
- 16. Elapsed Time Per Partition
- 17. Analysis & Synthesis Messages
+ 12. Source assignments for ring_oscillator_13:f1
+ 13. Source assignments for ring_oscillator_7:f2
+ 14. Source assignments for ring_oscillator_7:f3
+ 15. Source assignments for ring_oscillator_21:f4
+ 16. Source assignments for ring_oscillator_17:f5
+ 17. Source assignments for ring_oscillator_7:f6
+ 18. Source assignments for ring_oscillator_9:f7
+ 19. Source assignments for ring_oscillator_9:f8
+ 20. Source assignments for ring_oscillator_9:e1
+ 21. Source assignments for ring_oscillator_9:e2
+ 22. Source assignments for ring_oscillator_17:e3
+ 23. Source assignments for ring_oscillator_7:e4
+ 24. Source assignments for ring_oscillator_7:e5
+ 25. Source assignments for ring_oscillator_9:e6
+ 26. Source assignments for ring_oscillator_15:e7
+ 27. Source assignments for ring_oscillator_17:e8
+ 28. Port Connectivity Checks: "comparator:p1"
+ 29. Port Connectivity Checks: "counter:s2"
+ 30. Port Connectivity Checks: "counter:s1"
+ 31. Post-Synthesis Netlist Statistics for Top Partition
+ 32. Elapsed Time Per Partition
+ 33. Analysis & Synthesis Messages
 
 
 
@@ -48,15 +64,15 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Fri Jan 13 08:54:37 2023       ;
+; Analysis & Synthesis Status        ; Successful - Fri Jan 13 13:14:05 2023       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; lab9_01                                     ;
 ; Top-level Entity Name              ; lab9_01                                     ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 0                                           ;
-;     Total combinational functions  ; 0                                           ;
-;     Dedicated logic registers      ; 0                                           ;
-; Total registers                    ; 0                                           ;
+; Total logic elements               ; 267                                         ;
+;     Total combinational functions  ; 267                                         ;
+;     Dedicated logic registers      ; 106                                         ;
+; Total registers                    ; 106                                         ;
 ; Total pins                         ; 13                                          ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0                                           ;
@@ -160,10 +176,11 @@ refer to the applicable agreement for further details.
 ; Maximum allowed            ; 6           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
-; Maximum used               ; 1           ;
+; Maximum used               ; 6           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
+;     Processors 2-6         ;   0.0%      ;
 +----------------------------+-------------+
 
 
@@ -178,6 +195,7 @@ refer to the applicable agreement for further details.
 ; ring_oscillator_7.vhd            ; yes             ; User VHDL File  ; D:/vhdl/lab9/ring_oscillator_7.vhd   ;         ;
 ; ring_oscillator_9.vhd            ; yes             ; User VHDL File  ; D:/vhdl/lab9/ring_oscillator_9.vhd   ;         ;
 ; ring_oscillator_13.vhd           ; yes             ; User VHDL File  ; D:/vhdl/lab9/ring_oscillator_13.vhd  ;         ;
+; ring_oscillator_15.vhd           ; yes             ; User VHDL File  ; D:/vhdl/lab9/ring_oscillator_15.vhd  ;         ;
 ; ring_oscillator_17.vhd           ; yes             ; User VHDL File  ; D:/vhdl/lab9/ring_oscillator_17.vhd  ;         ;
 ; ring_oscillator_21 .vhd          ; yes             ; User VHDL File  ; D:/vhdl/lab9/ring_oscillator_21 .vhd ;         ;
 ; comparator.vhd                   ; yes             ; User VHDL File  ; D:/vhdl/lab9/comparator.vhd          ;         ;
@@ -191,87 +209,83 @@ refer to the applicable agreement for further details.
 +---------------------------------------------+-----------+
 ; Resource                                    ; Usage     ;
 +---------------------------------------------+-----------+
+; Estimated Total logic elements              ; 267       ;
 ;                                             ;           ;
-; Total combinational functions               ; 0         ;
+; Total combinational functions               ; 267       ;
 ; Logic element usage by number of LUT inputs ;           ;
-;     -- 4 input functions                    ; 0         ;
-;     -- 3 input functions                    ; 0         ;
-;     -- <=2 input functions                  ; 0         ;
+;     -- 4 input functions                    ; 16        ;
+;     -- 3 input functions                    ; 77        ;
+;     -- <=2 input functions                  ; 174       ;
 ;                                             ;           ;
 ; Logic elements by mode                      ;           ;
-;     -- normal mode                          ; 0         ;
-;     -- arithmetic mode                      ; 0         ;
+;     -- normal mode                          ; 144       ;
+;     -- arithmetic mode                      ; 123       ;
 ;                                             ;           ;
-; Total registers                             ; 0         ;
-;     -- Dedicated logic registers            ; 0         ;
+; Total registers                             ; 106       ;
+;     -- Dedicated logic registers            ; 106       ;
 ;     -- I/O registers                        ; 0         ;
 ;                                             ;           ;
 ; I/O pins                                    ; 13        ;
 ;                                             ;           ;
 ; Embedded Multiplier 9-bit elements          ; 0         ;
 ;                                             ;           ;
-; Maximum fan-out node                        ; clk_50Mhz ;
-; Maximum fan-out                             ; 1         ;
-; Total fan-out                               ; 13        ;
-; Average fan-out                             ; 0.50      ;
+; Maximum fan-out node                        ; reset_ris ;
+; Maximum fan-out                             ; 52        ;
+; Total fan-out                               ; 858       ;
+; Average fan-out                             ; 2.15      ;
 +---------------------------------------------+-----------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                      ;
-+----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+-------------+--------------+
-; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name ; Entity Name ; Library Name ;
-+----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+-------------+--------------+
-; |lab9_01                   ; 0 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 13   ; 0            ; |lab9_01            ; lab9_01     ; work         ;
-+----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+-------------+--------------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                        ;
++----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------+--------------------+--------------+
+; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name            ; Entity Name        ; Library Name ;
++----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------+--------------------+--------------+
+; |lab9_01                   ; 267 (3)             ; 106 (0)                   ; 0           ; 0            ; 0       ; 0         ; 13   ; 0            ; |lab9_01                       ; lab9_01            ; work         ;
+;    |comparator:p1|         ; 42 (42)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |lab9_01|comparator:p1         ; comparator         ; work         ;
+;    |counter:s1|            ; 26 (26)             ; 26 (26)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |lab9_01|counter:s1            ; counter            ; work         ;
+;    |counter:s2|            ; 26 (26)             ; 26 (26)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |lab9_01|counter:s2            ; counter            ; work         ;
+;    |divider:g1|            ; 48 (48)             ; 27 (27)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |lab9_01|divider:g1            ; divider            ; work         ;
+;    |divider:g2|            ; 48 (48)             ; 27 (27)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |lab9_01|divider:g2            ; divider            ; work         ;
+;    |mux:k1|                ; 3 (3)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |lab9_01|mux:k1                ; mux                ; work         ;
+;    |mux:k2|                ; 3 (3)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |lab9_01|mux:k2                ; mux                ; work         ;
+;    |ring_oscillator_13:f1| ; 14 (14)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |lab9_01|ring_oscillator_13:f1 ; ring_oscillator_13 ; work         ;
+;    |ring_oscillator_17:e3| ; 18 (18)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |lab9_01|ring_oscillator_17:e3 ; ring_oscillator_17 ; work         ;
+;    |ring_oscillator_7:f2|  ; 8 (8)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |lab9_01|ring_oscillator_7:f2  ; ring_oscillator_7  ; work         ;
+;    |ring_oscillator_7:f3|  ; 8 (8)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |lab9_01|ring_oscillator_7:f3  ; ring_oscillator_7  ; work         ;
+;    |ring_oscillator_9:e1|  ; 10 (10)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |lab9_01|ring_oscillator_9:e1  ; ring_oscillator_9  ; work         ;
+;    |ring_oscillator_9:e2|  ; 10 (10)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |lab9_01|ring_oscillator_9:e2  ; ring_oscillator_9  ; work         ;
++----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------+--------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
-+--------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                             ;
-+-----------------------------------------+--------------------------------------+
-; Register name                           ; Reason for Removal                   ;
-+-----------------------------------------+--------------------------------------+
-; divider:g2|count[0..7]                  ; Stuck at GND due to stuck port clock ;
-; divider:g2|clk_out                      ; Stuck at GND due to stuck port clock ;
-; divider:g2|count[8..25]                 ; Stuck at GND due to stuck port clock ;
-; divider:g1|count[0..7]                  ; Stuck at GND due to stuck port clock ;
-; divider:g1|clk_out                      ; Stuck at GND due to stuck port clock ;
-; divider:g1|count[8..25]                 ; Stuck at GND due to stuck port clock ;
-; counter:s2|counter[0..31]               ; Stuck at GND due to stuck port clock ;
-; counter:s1|counter[0..31]               ; Stuck at GND due to stuck port clock ;
-; Total Number of Removed Registers = 118 ;                                      ;
-+-----------------------------------------+--------------------------------------+
++------------------------------------------------------------------------------------------------------+
+; User-Specified and Inferred Latches                                                                  ;
++----------------------------------------------------+------------------------+------------------------+
+; Latch Name                                         ; Latch Enable Signal    ; Free of Timing Hazards ;
++----------------------------------------------------+------------------------+------------------------+
+; comparator:p1|ouput[0]                             ; comparator:p1|Decoder0 ; yes                    ;
+; comparator:p1|ouput[1]                             ; comparator:p1|Decoder0 ; yes                    ;
+; comparator:p1|ouput[2]                             ; comparator:p1|Decoder0 ; yes                    ;
+; comparator:p1|ouput[3]                             ; comparator:p1|Decoder0 ; yes                    ;
+; comparator:p1|ouput[4]                             ; comparator:p1|Decoder0 ; yes                    ;
+; comparator:p1|ouput[5]                             ; comparator:p1|Decoder0 ; yes                    ;
+; comparator:p1|ouput[6]                             ; comparator:p1|Decoder0 ; yes                    ;
+; comparator:p1|ouput[7]                             ; comparator:p1|Decoder0 ; yes                    ;
+; Number of user-specified and inferred latches = 8  ;                        ;                        ;
++----------------------------------------------------+------------------------+------------------------+
+Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
 
 
-+------------------------------------------------------------------------------------------------------------------------+
-; Removed Registers Triggering Further Register Optimizations                                                            ;
-+--------------------+-------------------------+-------------------------------------------------------------------------+
-; Register name      ; Reason for Removal      ; Registers Removed due to This Register                                  ;
-+--------------------+-------------------------+-------------------------------------------------------------------------+
-; divider:g2|clk_out ; Stuck at GND            ; counter:s2|counter[0], counter:s2|counter[31], counter:s2|counter[30],  ;
-;                    ; due to stuck port clock ; counter:s2|counter[29], counter:s2|counter[28], counter:s2|counter[27], ;
-;                    ;                         ; counter:s2|counter[26], counter:s2|counter[25], counter:s2|counter[24], ;
-;                    ;                         ; counter:s2|counter[23], counter:s2|counter[22], counter:s2|counter[21], ;
-;                    ;                         ; counter:s2|counter[20], counter:s2|counter[19], counter:s2|counter[18], ;
-;                    ;                         ; counter:s2|counter[17], counter:s2|counter[16], counter:s2|counter[15], ;
-;                    ;                         ; counter:s2|counter[14], counter:s2|counter[13], counter:s2|counter[12], ;
-;                    ;                         ; counter:s2|counter[11], counter:s2|counter[10], counter:s2|counter[9],  ;
-;                    ;                         ; counter:s2|counter[8], counter:s2|counter[7], counter:s2|counter[6],    ;
-;                    ;                         ; counter:s2|counter[5], counter:s2|counter[4], counter:s2|counter[3],    ;
-;                    ;                         ; counter:s2|counter[2], counter:s2|counter[1]                            ;
-; divider:g1|clk_out ; Stuck at GND            ; counter:s1|counter[0], counter:s1|counter[31], counter:s1|counter[30],  ;
-;                    ; due to stuck port clock ; counter:s1|counter[29], counter:s1|counter[28], counter:s1|counter[27], ;
-;                    ;                         ; counter:s1|counter[26], counter:s1|counter[25], counter:s1|counter[24], ;
-;                    ;                         ; counter:s1|counter[23], counter:s1|counter[22], counter:s1|counter[21], ;
-;                    ;                         ; counter:s1|counter[20], counter:s1|counter[19], counter:s1|counter[18], ;
-;                    ;                         ; counter:s1|counter[17], counter:s1|counter[16], counter:s1|counter[15], ;
-;                    ;                         ; counter:s1|counter[14], counter:s1|counter[13], counter:s1|counter[12], ;
-;                    ;                         ; counter:s1|counter[11], counter:s1|counter[10], counter:s1|counter[9],  ;
-;                    ;                         ; counter:s1|counter[8], counter:s1|counter[7], counter:s1|counter[6],    ;
-;                    ;                         ; counter:s1|counter[5], counter:s1|counter[4], counter:s1|counter[3],    ;
-;                    ;                         ; counter:s1|counter[2], counter:s1|counter[1]                            ;
-+--------------------+-------------------------+-------------------------------------------------------------------------+
++-------------------------------------------------------------+
+; Registers Removed During Synthesis                          ;
++----------------------------------------+--------------------+
+; Register name                          ; Reason for Removal ;
++----------------------------------------+--------------------+
+; counter:s2|counter[26..31]             ; Lost fanout        ;
+; counter:s1|counter[26..31]             ; Lost fanout        ;
+; Total Number of Removed Registers = 12 ;                    ;
++----------------------------------------+--------------------+
 
 
 +------------------------------------------------------+
@@ -279,10 +293,10 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 0     ;
+; Total registers                              ; 106   ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Clear ; 52    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
 ; Number of registers using Clock Enable       ; 0     ;
 ; Number of registers using Preset             ; 0     ;
@@ -301,6 +315,526 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; IGNORE_LCELL_BUFFERS         ; off   ; -    ; reset_ris  ;
 ; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; reset_ris  ;
 +------------------------------+-------+------+------------+
+
+
++-----------------------------------------------------------+
+; Source assignments for ring_oscillator_13:f1              ;
++------------------------------+-------+------+-------------+
+; Assignment                   ; Value ; From ; To          ;
++------------------------------+-------+------+-------------+
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; enable~buf0 ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; enable~buf0 ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; chain[1]    ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; chain[1]    ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; chain[2]    ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; chain[2]    ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; chain[3]    ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; chain[3]    ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; chain[4]    ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; chain[4]    ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; chain[5]    ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; chain[5]    ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; chain[6]    ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; chain[6]    ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; chain[7]    ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; chain[7]    ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; chain[8]    ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; chain[8]    ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; chain[9]    ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; chain[9]    ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; chain[10]   ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; chain[10]   ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; chain[11]   ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; chain[11]   ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; chain[12]   ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; chain[12]   ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; chain[0]    ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; chain[0]    ;
++------------------------------+-------+------+-------------+
+
+
++-----------------------------------------------------------+
+; Source assignments for ring_oscillator_7:f2               ;
++------------------------------+-------+------+-------------+
+; Assignment                   ; Value ; From ; To          ;
++------------------------------+-------+------+-------------+
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; enable~buf0 ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; enable~buf0 ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; chain[1]    ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; chain[1]    ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; chain[2]    ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; chain[2]    ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; chain[3]    ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; chain[3]    ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; chain[4]    ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; chain[4]    ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; chain[5]    ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; chain[5]    ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; chain[6]    ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; chain[6]    ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; chain[0]    ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; chain[0]    ;
++------------------------------+-------+------+-------------+
+
+
++-----------------------------------------------------------+
+; Source assignments for ring_oscillator_7:f3               ;
++------------------------------+-------+------+-------------+
+; Assignment                   ; Value ; From ; To          ;
++------------------------------+-------+------+-------------+
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; enable~buf0 ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; enable~buf0 ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; chain[1]    ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; chain[1]    ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; chain[2]    ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; chain[2]    ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; chain[3]    ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; chain[3]    ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; chain[4]    ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; chain[4]    ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; chain[5]    ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; chain[5]    ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; chain[6]    ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; chain[6]    ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; chain[0]    ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; chain[0]    ;
++------------------------------+-------+------+-------------+
+
+
++-----------------------------------------------------------+
+; Source assignments for ring_oscillator_21:f4              ;
++------------------------------+-------+------+-------------+
+; Assignment                   ; Value ; From ; To          ;
++------------------------------+-------+------+-------------+
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; enable~buf0 ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; enable~buf0 ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; chain[1]    ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; chain[1]    ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; chain[2]    ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; chain[2]    ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; chain[3]    ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; chain[3]    ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; chain[4]    ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; chain[4]    ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; chain[5]    ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; chain[5]    ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; chain[6]    ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; chain[6]    ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; chain[7]    ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; chain[7]    ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; chain[8]    ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; chain[8]    ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; chain[9]    ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; chain[9]    ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; chain[10]   ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; chain[10]   ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; chain[11]   ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; chain[11]   ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; chain[12]   ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; chain[12]   ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; chain[13]   ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; chain[13]   ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; chain[14]   ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; chain[14]   ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; chain[15]   ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; chain[15]   ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; chain[16]   ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; chain[16]   ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; chain[17]   ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; chain[17]   ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; chain[18]   ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; chain[18]   ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; chain[19]   ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; chain[19]   ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; chain[20]   ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; chain[20]   ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; chain[0]    ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; chain[0]    ;
++------------------------------+-------+------+-------------+
+
+
++-----------------------------------------------------------+
+; Source assignments for ring_oscillator_17:f5              ;
++------------------------------+-------+------+-------------+
+; Assignment                   ; Value ; From ; To          ;
++------------------------------+-------+------+-------------+
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; enable~buf0 ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; enable~buf0 ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; chain[1]    ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; chain[1]    ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; chain[2]    ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; chain[2]    ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; chain[3]    ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; chain[3]    ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; chain[4]    ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; chain[4]    ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; chain[5]    ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; chain[5]    ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; chain[6]    ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; chain[6]    ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; chain[7]    ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; chain[7]    ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; chain[8]    ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; chain[8]    ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; chain[9]    ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; chain[9]    ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; chain[10]   ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; chain[10]   ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; chain[11]   ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; chain[11]   ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; chain[12]   ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; chain[12]   ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; chain[13]   ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; chain[13]   ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; chain[14]   ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; chain[14]   ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; chain[15]   ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; chain[15]   ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; chain[16]   ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; chain[16]   ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; chain[0]    ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; chain[0]    ;
++------------------------------+-------+------+-------------+
+
+
++-----------------------------------------------------------+
+; Source assignments for ring_oscillator_7:f6               ;
++------------------------------+-------+------+-------------+
+; Assignment                   ; Value ; From ; To          ;
++------------------------------+-------+------+-------------+
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; enable~buf0 ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; enable~buf0 ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; chain[1]    ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; chain[1]    ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; chain[2]    ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; chain[2]    ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; chain[3]    ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; chain[3]    ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; chain[4]    ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; chain[4]    ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; chain[5]    ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; chain[5]    ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; chain[6]    ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; chain[6]    ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; chain[0]    ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; chain[0]    ;
++------------------------------+-------+------+-------------+
+
+
++-----------------------------------------------------------+
+; Source assignments for ring_oscillator_9:f7               ;
++------------------------------+-------+------+-------------+
+; Assignment                   ; Value ; From ; To          ;
++------------------------------+-------+------+-------------+
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; enable~buf0 ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; enable~buf0 ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; chain[1]    ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; chain[1]    ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; chain[2]    ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; chain[2]    ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; chain[3]    ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; chain[3]    ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; chain[4]    ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; chain[4]    ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; chain[5]    ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; chain[5]    ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; chain[6]    ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; chain[6]    ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; chain[7]    ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; chain[7]    ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; chain[8]    ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; chain[8]    ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; chain[0]    ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; chain[0]    ;
++------------------------------+-------+------+-------------+
+
+
++-----------------------------------------------------------+
+; Source assignments for ring_oscillator_9:f8               ;
++------------------------------+-------+------+-------------+
+; Assignment                   ; Value ; From ; To          ;
++------------------------------+-------+------+-------------+
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; enable~buf0 ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; enable~buf0 ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; chain[1]    ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; chain[1]    ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; chain[2]    ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; chain[2]    ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; chain[3]    ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; chain[3]    ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; chain[4]    ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; chain[4]    ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; chain[5]    ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; chain[5]    ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; chain[6]    ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; chain[6]    ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; chain[7]    ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; chain[7]    ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; chain[8]    ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; chain[8]    ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; chain[0]    ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; chain[0]    ;
++------------------------------+-------+------+-------------+
+
+
++-----------------------------------------------------------+
+; Source assignments for ring_oscillator_9:e1               ;
++------------------------------+-------+------+-------------+
+; Assignment                   ; Value ; From ; To          ;
++------------------------------+-------+------+-------------+
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; enable~buf0 ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; enable~buf0 ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; chain[1]    ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; chain[1]    ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; chain[2]    ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; chain[2]    ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; chain[3]    ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; chain[3]    ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; chain[4]    ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; chain[4]    ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; chain[5]    ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; chain[5]    ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; chain[6]    ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; chain[6]    ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; chain[7]    ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; chain[7]    ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; chain[8]    ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; chain[8]    ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; chain[0]    ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; chain[0]    ;
++------------------------------+-------+------+-------------+
+
+
++-----------------------------------------------------------+
+; Source assignments for ring_oscillator_9:e2               ;
++------------------------------+-------+------+-------------+
+; Assignment                   ; Value ; From ; To          ;
++------------------------------+-------+------+-------------+
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; enable~buf0 ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; enable~buf0 ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; chain[1]    ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; chain[1]    ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; chain[2]    ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; chain[2]    ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; chain[3]    ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; chain[3]    ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; chain[4]    ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; chain[4]    ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; chain[5]    ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; chain[5]    ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; chain[6]    ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; chain[6]    ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; chain[7]    ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; chain[7]    ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; chain[8]    ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; chain[8]    ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; chain[0]    ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; chain[0]    ;
++------------------------------+-------+------+-------------+
+
+
++-----------------------------------------------------------+
+; Source assignments for ring_oscillator_17:e3              ;
++------------------------------+-------+------+-------------+
+; Assignment                   ; Value ; From ; To          ;
++------------------------------+-------+------+-------------+
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; enable~buf0 ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; enable~buf0 ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; chain[1]    ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; chain[1]    ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; chain[2]    ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; chain[2]    ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; chain[3]    ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; chain[3]    ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; chain[4]    ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; chain[4]    ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; chain[5]    ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; chain[5]    ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; chain[6]    ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; chain[6]    ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; chain[7]    ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; chain[7]    ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; chain[8]    ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; chain[8]    ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; chain[9]    ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; chain[9]    ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; chain[10]   ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; chain[10]   ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; chain[11]   ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; chain[11]   ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; chain[12]   ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; chain[12]   ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; chain[13]   ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; chain[13]   ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; chain[14]   ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; chain[14]   ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; chain[15]   ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; chain[15]   ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; chain[16]   ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; chain[16]   ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; chain[0]    ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; chain[0]    ;
++------------------------------+-------+------+-------------+
+
+
++-----------------------------------------------------------+
+; Source assignments for ring_oscillator_7:e4               ;
++------------------------------+-------+------+-------------+
+; Assignment                   ; Value ; From ; To          ;
++------------------------------+-------+------+-------------+
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; enable~buf0 ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; enable~buf0 ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; chain[1]    ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; chain[1]    ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; chain[2]    ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; chain[2]    ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; chain[3]    ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; chain[3]    ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; chain[4]    ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; chain[4]    ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; chain[5]    ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; chain[5]    ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; chain[6]    ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; chain[6]    ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; chain[0]    ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; chain[0]    ;
++------------------------------+-------+------+-------------+
+
+
++-----------------------------------------------------------+
+; Source assignments for ring_oscillator_7:e5               ;
++------------------------------+-------+------+-------------+
+; Assignment                   ; Value ; From ; To          ;
++------------------------------+-------+------+-------------+
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; enable~buf0 ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; enable~buf0 ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; chain[1]    ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; chain[1]    ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; chain[2]    ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; chain[2]    ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; chain[3]    ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; chain[3]    ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; chain[4]    ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; chain[4]    ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; chain[5]    ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; chain[5]    ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; chain[6]    ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; chain[6]    ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; chain[0]    ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; chain[0]    ;
++------------------------------+-------+------+-------------+
+
+
++-----------------------------------------------------------+
+; Source assignments for ring_oscillator_9:e6               ;
++------------------------------+-------+------+-------------+
+; Assignment                   ; Value ; From ; To          ;
++------------------------------+-------+------+-------------+
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; enable~buf0 ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; enable~buf0 ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; chain[1]    ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; chain[1]    ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; chain[2]    ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; chain[2]    ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; chain[3]    ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; chain[3]    ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; chain[4]    ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; chain[4]    ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; chain[5]    ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; chain[5]    ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; chain[6]    ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; chain[6]    ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; chain[7]    ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; chain[7]    ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; chain[8]    ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; chain[8]    ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; chain[0]    ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; chain[0]    ;
++------------------------------+-------+------+-------------+
+
+
++-----------------------------------------------------------+
+; Source assignments for ring_oscillator_15:e7              ;
++------------------------------+-------+------+-------------+
+; Assignment                   ; Value ; From ; To          ;
++------------------------------+-------+------+-------------+
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; enable~buf0 ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; enable~buf0 ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; chain[1]    ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; chain[1]    ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; chain[2]    ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; chain[2]    ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; chain[3]    ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; chain[3]    ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; chain[4]    ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; chain[4]    ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; chain[5]    ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; chain[5]    ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; chain[6]    ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; chain[6]    ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; chain[7]    ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; chain[7]    ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; chain[8]    ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; chain[8]    ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; chain[9]    ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; chain[9]    ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; chain[10]   ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; chain[10]   ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; chain[11]   ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; chain[11]   ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; chain[12]   ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; chain[12]   ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; chain[13]   ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; chain[13]   ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; chain[14]   ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; chain[14]   ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; chain[0]    ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; chain[0]    ;
++------------------------------+-------+------+-------------+
+
+
++-----------------------------------------------------------+
+; Source assignments for ring_oscillator_17:e8              ;
++------------------------------+-------+------+-------------+
+; Assignment                   ; Value ; From ; To          ;
++------------------------------+-------+------+-------------+
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; enable~buf0 ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; enable~buf0 ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; chain[1]    ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; chain[1]    ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; chain[2]    ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; chain[2]    ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; chain[3]    ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; chain[3]    ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; chain[4]    ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; chain[4]    ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; chain[5]    ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; chain[5]    ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; chain[6]    ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; chain[6]    ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; chain[7]    ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; chain[7]    ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; chain[8]    ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; chain[8]    ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; chain[9]    ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; chain[9]    ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; chain[10]   ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; chain[10]   ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; chain[11]   ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; chain[11]   ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; chain[12]   ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; chain[12]   ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; chain[13]   ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; chain[13]   ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; chain[14]   ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; chain[14]   ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; chain[15]   ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; chain[15]   ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; chain[16]   ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; chain[16]   ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; chain[0]    ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; chain[0]    ;
++------------------------------+-------+------+-------------+
 
 
 +----------------------------------------------------+
@@ -337,12 +871,21 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
 ; boundary_port         ; 13                          ;
-; cycloneiii_lcell_comb ; 1                           ;
-;     normal            ; 1                           ;
-;         0 data inputs ; 1                           ;
+; cycloneiii_ff         ; 106                         ;
+;     CLR               ; 52                          ;
+;     plain             ; 54                          ;
+; cycloneiii_lcell_comb ; 267                         ;
+;     arith             ; 123                         ;
+;         2 data inputs ; 96                          ;
+;         3 data inputs ; 27                          ;
+;     normal            ; 144                         ;
+;         1 data inputs ; 70                          ;
+;         2 data inputs ; 8                           ;
+;         3 data inputs ; 50                          ;
+;         4 data inputs ; 16                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 0.00                        ;
-; Average LUT depth     ; 0.00                        ;
+; Max LUT depth         ; 18.00                       ;
+; Average LUT depth     ; 4.66                        ;
 +-----------------------+-----------------------------+
 
 
@@ -361,7 +904,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Fri Jan 13 08:54:29 2023
+    Info: Processing started: Fri Jan 13 13:13:57 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off lab9_01 -c lab9_01
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
@@ -403,20 +946,11 @@ Info (12021): Found 2 design units, including 1 entities, in source file divider
     Info (12023): Found entity 1: divider File: D:/vhdl/lab9/divider.vhd Line: 5
 Info (12127): Elaborating entity "lab9_01" for the top level hierarchy
 Info (12128): Elaborating entity "ring_oscillator_13" for hierarchy "ring_oscillator_13:f1" File: D:/vhdl/lab9/lab9_01.vhd Line: 26
-Warning (10034): Output port "ck_out" at ring_oscillator_13.vhd(6) has no driver File: D:/vhdl/lab9/ring_oscillator_13.vhd Line: 6
-Warning (12158): Entity "ring_oscillator_13" contains only dangling pins File: D:/vhdl/lab9/lab9_01.vhd Line: 26
 Info (12128): Elaborating entity "ring_oscillator_7" for hierarchy "ring_oscillator_7:f2" File: D:/vhdl/lab9/lab9_01.vhd Line: 27
-Warning (10034): Output port "ck_out" at ring_oscillator_7.vhd(6) has no driver File: D:/vhdl/lab9/ring_oscillator_7.vhd Line: 6
-Warning (12158): Entity "ring_oscillator_7" contains only dangling pins File: D:/vhdl/lab9/lab9_01.vhd Line: 27
 Info (12128): Elaborating entity "ring_oscillator_21" for hierarchy "ring_oscillator_21:f4" File: D:/vhdl/lab9/lab9_01.vhd Line: 29
-Warning (10034): Output port "ck_out" at ring_oscillator_21 .vhd(6) has no driver File: D:/vhdl/lab9/ring_oscillator_21 .vhd Line: 6
-Warning (12158): Entity "ring_oscillator_21" contains only dangling pins File: D:/vhdl/lab9/lab9_01.vhd Line: 29
 Info (12128): Elaborating entity "ring_oscillator_17" for hierarchy "ring_oscillator_17:f5" File: D:/vhdl/lab9/lab9_01.vhd Line: 30
-Warning (10034): Output port "ck_out" at ring_oscillator_17.vhd(6) has no driver File: D:/vhdl/lab9/ring_oscillator_17.vhd Line: 6
-Warning (12158): Entity "ring_oscillator_17" contains only dangling pins File: D:/vhdl/lab9/lab9_01.vhd Line: 30
 Info (12128): Elaborating entity "ring_oscillator_9" for hierarchy "ring_oscillator_9:f7" File: D:/vhdl/lab9/lab9_01.vhd Line: 32
-Warning (10034): Output port "ck_out" at ring_oscillator_9.vhd(6) has no driver File: D:/vhdl/lab9/ring_oscillator_9.vhd Line: 6
-Warning (12158): Entity "ring_oscillator_9" contains only dangling pins File: D:/vhdl/lab9/lab9_01.vhd Line: 32
+Info (12128): Elaborating entity "ring_oscillator_15" for hierarchy "ring_oscillator_15:e7" File: D:/vhdl/lab9/lab9_01.vhd Line: 40
 Info (12128): Elaborating entity "mux" for hierarchy "mux:k1" File: D:/vhdl/lab9/lab9_01.vhd Line: 42
 Info (12128): Elaborating entity "divider" for hierarchy "divider:g1" File: D:/vhdl/lab9/lab9_01.vhd Line: 44
 Info (12128): Elaborating entity "counter" for hierarchy "counter:s1" File: D:/vhdl/lab9/lab9_01.vhd Line: 46
@@ -432,37 +966,85 @@ Info (10041): Inferred latch for "ouput[4]" at comparator.vhd(14) File: D:/vhdl/
 Info (10041): Inferred latch for "ouput[5]" at comparator.vhd(14) File: D:/vhdl/lab9/comparator.vhd Line: 14
 Info (10041): Inferred latch for "ouput[6]" at comparator.vhd(14) File: D:/vhdl/lab9/comparator.vhd Line: 14
 Info (10041): Inferred latch for "ouput[7]" at comparator.vhd(14) File: D:/vhdl/lab9/comparator.vhd Line: 14
-Warning (14284): Synthesized away the following node(s):
-    Warning (14285): Synthesized away the following LCELL buffer node(s):
-        Warning (14320): Synthesized away node "reset~buf0" File: D:/vhdl/lab9/lab9_01.vhd Line: 7
-        Warning (14320): Synthesized away node "resetn" File: D:/vhdl/lab9/lab9_01.vhd Line: 15
-        Warning (14320): Synthesized away node "reset_ris" File: D:/vhdl/lab9/lab9_01.vhd Line: 15
 Warning (19016): Clock multiplexers are found and protected
     Warning (19017): Found clock multiplexer mux:k2|Mux0 File: D:/vhdl/lab9/mux.vhd Line: 13
     Warning (19017): Found clock multiplexer mux:k1|Mux0 File: D:/vhdl/lab9/mux.vhd Line: 13
-Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "ouput[0]" is stuck at GND File: D:/vhdl/lab9/lab9_01.vhd Line: 9
-    Warning (13410): Pin "ouput[1]" is stuck at GND File: D:/vhdl/lab9/lab9_01.vhd Line: 9
-    Warning (13410): Pin "ouput[2]" is stuck at GND File: D:/vhdl/lab9/lab9_01.vhd Line: 9
-    Warning (13410): Pin "ouput[3]" is stuck at GND File: D:/vhdl/lab9/lab9_01.vhd Line: 9
-    Warning (13410): Pin "ouput[4]" is stuck at GND File: D:/vhdl/lab9/lab9_01.vhd Line: 9
-    Warning (13410): Pin "ouput[5]" is stuck at GND File: D:/vhdl/lab9/lab9_01.vhd Line: 9
-    Warning (13410): Pin "ouput[6]" is stuck at GND File: D:/vhdl/lab9/lab9_01.vhd Line: 9
-    Warning (13410): Pin "ouput[7]" is stuck at GND File: D:/vhdl/lab9/lab9_01.vhd Line: 9
+Info (286030): Timing-Driven Synthesis is running
+Info (17049): 12 registers lost all their fanouts during netlist optimizations.
+Info (17016): Found the following redundant logic cells in design
+    Info (17048): Logic cell "reset~buf0" File: D:/vhdl/lab9/lab9_01.vhd Line: 7
+    Info (17048): Logic cell "resetn" File: D:/vhdl/lab9/lab9_01.vhd Line: 15
+    Info (17048): Logic cell "ring_oscillator_9:e1|chain[8]" File: D:/vhdl/lab9/ring_oscillator_9.vhd Line: 10
+    Info (17048): Logic cell "ring_oscillator_9:e2|chain[8]" File: D:/vhdl/lab9/ring_oscillator_9.vhd Line: 10
+    Info (17048): Logic cell "ring_oscillator_17:e3|chain[16]" File: D:/vhdl/lab9/ring_oscillator_17.vhd Line: 10
+    Info (17048): Logic cell "ring_oscillator_13:f1|chain[12]" File: D:/vhdl/lab9/ring_oscillator_13.vhd Line: 10
+    Info (17048): Logic cell "ring_oscillator_7:f2|chain[6]" File: D:/vhdl/lab9/ring_oscillator_7.vhd Line: 10
+    Info (17048): Logic cell "ring_oscillator_7:f3|chain[6]" File: D:/vhdl/lab9/ring_oscillator_7.vhd Line: 10
+    Info (17048): Logic cell "ring_oscillator_9:e1|chain[7]" File: D:/vhdl/lab9/ring_oscillator_9.vhd Line: 10
+    Info (17048): Logic cell "ring_oscillator_9:e2|chain[7]" File: D:/vhdl/lab9/ring_oscillator_9.vhd Line: 10
+    Info (17048): Logic cell "ring_oscillator_17:e3|chain[15]" File: D:/vhdl/lab9/ring_oscillator_17.vhd Line: 10
+    Info (17048): Logic cell "ring_oscillator_13:f1|chain[11]" File: D:/vhdl/lab9/ring_oscillator_13.vhd Line: 10
+    Info (17048): Logic cell "ring_oscillator_7:f2|chain[5]" File: D:/vhdl/lab9/ring_oscillator_7.vhd Line: 10
+    Info (17048): Logic cell "ring_oscillator_7:f3|chain[5]" File: D:/vhdl/lab9/ring_oscillator_7.vhd Line: 10
+    Info (17048): Logic cell "ring_oscillator_9:e1|chain[6]" File: D:/vhdl/lab9/ring_oscillator_9.vhd Line: 10
+    Info (17048): Logic cell "ring_oscillator_9:e2|chain[6]" File: D:/vhdl/lab9/ring_oscillator_9.vhd Line: 10
+    Info (17048): Logic cell "ring_oscillator_17:e3|chain[14]" File: D:/vhdl/lab9/ring_oscillator_17.vhd Line: 10
+    Info (17048): Logic cell "ring_oscillator_13:f1|chain[10]" File: D:/vhdl/lab9/ring_oscillator_13.vhd Line: 10
+    Info (17048): Logic cell "ring_oscillator_7:f2|chain[4]" File: D:/vhdl/lab9/ring_oscillator_7.vhd Line: 10
+    Info (17048): Logic cell "ring_oscillator_7:f3|chain[4]" File: D:/vhdl/lab9/ring_oscillator_7.vhd Line: 10
+    Info (17048): Logic cell "ring_oscillator_9:e1|chain[5]" File: D:/vhdl/lab9/ring_oscillator_9.vhd Line: 10
+    Info (17048): Logic cell "ring_oscillator_9:e2|chain[5]" File: D:/vhdl/lab9/ring_oscillator_9.vhd Line: 10
+    Info (17048): Logic cell "ring_oscillator_17:e3|chain[13]" File: D:/vhdl/lab9/ring_oscillator_17.vhd Line: 10
+    Info (17048): Logic cell "ring_oscillator_13:f1|chain[9]" File: D:/vhdl/lab9/ring_oscillator_13.vhd Line: 10
+    Info (17048): Logic cell "ring_oscillator_7:f2|chain[3]" File: D:/vhdl/lab9/ring_oscillator_7.vhd Line: 10
+    Info (17048): Logic cell "ring_oscillator_7:f3|chain[3]" File: D:/vhdl/lab9/ring_oscillator_7.vhd Line: 10
+    Info (17048): Logic cell "ring_oscillator_9:e1|chain[4]" File: D:/vhdl/lab9/ring_oscillator_9.vhd Line: 10
+    Info (17048): Logic cell "ring_oscillator_9:e2|chain[4]" File: D:/vhdl/lab9/ring_oscillator_9.vhd Line: 10
+    Info (17048): Logic cell "ring_oscillator_17:e3|chain[12]" File: D:/vhdl/lab9/ring_oscillator_17.vhd Line: 10
+    Info (17048): Logic cell "ring_oscillator_13:f1|chain[8]" File: D:/vhdl/lab9/ring_oscillator_13.vhd Line: 10
+    Info (17048): Logic cell "ring_oscillator_7:f2|chain[2]" File: D:/vhdl/lab9/ring_oscillator_7.vhd Line: 10
+    Info (17048): Logic cell "ring_oscillator_7:f3|chain[2]" File: D:/vhdl/lab9/ring_oscillator_7.vhd Line: 10
+    Info (17048): Logic cell "ring_oscillator_9:e1|chain[3]" File: D:/vhdl/lab9/ring_oscillator_9.vhd Line: 10
+    Info (17048): Logic cell "ring_oscillator_9:e2|chain[3]" File: D:/vhdl/lab9/ring_oscillator_9.vhd Line: 10
+    Info (17048): Logic cell "ring_oscillator_17:e3|chain[11]" File: D:/vhdl/lab9/ring_oscillator_17.vhd Line: 10
+    Info (17048): Logic cell "ring_oscillator_13:f1|chain[7]" File: D:/vhdl/lab9/ring_oscillator_13.vhd Line: 10
+    Info (17048): Logic cell "ring_oscillator_7:f2|chain[1]" File: D:/vhdl/lab9/ring_oscillator_7.vhd Line: 10
+    Info (17048): Logic cell "ring_oscillator_7:f3|chain[1]" File: D:/vhdl/lab9/ring_oscillator_7.vhd Line: 10
+    Info (17048): Logic cell "ring_oscillator_9:e1|chain[2]" File: D:/vhdl/lab9/ring_oscillator_9.vhd Line: 10
+    Info (17048): Logic cell "ring_oscillator_9:e2|chain[2]" File: D:/vhdl/lab9/ring_oscillator_9.vhd Line: 10
+    Info (17048): Logic cell "ring_oscillator_17:e3|chain[10]" File: D:/vhdl/lab9/ring_oscillator_17.vhd Line: 10
+    Info (17048): Logic cell "ring_oscillator_13:f1|chain[6]" File: D:/vhdl/lab9/ring_oscillator_13.vhd Line: 10
+    Info (17048): Logic cell "ring_oscillator_9:e1|chain[1]" File: D:/vhdl/lab9/ring_oscillator_9.vhd Line: 10
+    Info (17048): Logic cell "ring_oscillator_9:e2|chain[1]" File: D:/vhdl/lab9/ring_oscillator_9.vhd Line: 10
+    Info (17048): Logic cell "ring_oscillator_17:e3|chain[9]" File: D:/vhdl/lab9/ring_oscillator_17.vhd Line: 10
+    Info (17048): Logic cell "ring_oscillator_13:f1|chain[5]" File: D:/vhdl/lab9/ring_oscillator_13.vhd Line: 10
+    Info (17048): Logic cell "ring_oscillator_7:f2|enable~buf0" File: D:/vhdl/lab9/ring_oscillator_7.vhd Line: 5
+    Info (17048): Logic cell "ring_oscillator_7:f3|enable~buf0" File: D:/vhdl/lab9/ring_oscillator_7.vhd Line: 5
+    Info (17048): Logic cell "ring_oscillator_17:e3|chain[8]" File: D:/vhdl/lab9/ring_oscillator_17.vhd Line: 10
+    Info (17048): Logic cell "ring_oscillator_13:f1|chain[4]" File: D:/vhdl/lab9/ring_oscillator_13.vhd Line: 10
+    Info (17048): Logic cell "ring_oscillator_9:e1|enable~buf0" File: D:/vhdl/lab9/ring_oscillator_9.vhd Line: 5
+    Info (17048): Logic cell "ring_oscillator_9:e2|enable~buf0" File: D:/vhdl/lab9/ring_oscillator_9.vhd Line: 5
+    Info (17048): Logic cell "ring_oscillator_17:e3|chain[7]" File: D:/vhdl/lab9/ring_oscillator_17.vhd Line: 10
+    Info (17048): Logic cell "ring_oscillator_13:f1|chain[3]" File: D:/vhdl/lab9/ring_oscillator_13.vhd Line: 10
+    Info (17048): Logic cell "ring_oscillator_17:e3|chain[6]" File: D:/vhdl/lab9/ring_oscillator_17.vhd Line: 10
+    Info (17048): Logic cell "ring_oscillator_13:f1|chain[2]" File: D:/vhdl/lab9/ring_oscillator_13.vhd Line: 10
+    Info (17048): Logic cell "ring_oscillator_17:e3|chain[5]" File: D:/vhdl/lab9/ring_oscillator_17.vhd Line: 10
+    Info (17048): Logic cell "ring_oscillator_13:f1|chain[1]" File: D:/vhdl/lab9/ring_oscillator_13.vhd Line: 10
+    Info (17048): Logic cell "ring_oscillator_17:e3|chain[4]" File: D:/vhdl/lab9/ring_oscillator_17.vhd Line: 10
+    Info (17048): Logic cell "ring_oscillator_17:e3|chain[3]" File: D:/vhdl/lab9/ring_oscillator_17.vhd Line: 10
+    Info (17048): Logic cell "ring_oscillator_13:f1|enable~buf0" File: D:/vhdl/lab9/ring_oscillator_13.vhd Line: 5
+    Info (17048): Logic cell "ring_oscillator_17:e3|chain[2]" File: D:/vhdl/lab9/ring_oscillator_17.vhd Line: 10
+    Info (17048): Logic cell "ring_oscillator_17:e3|chain[1]" File: D:/vhdl/lab9/ring_oscillator_17.vhd Line: 10
+    Info (17048): Logic cell "ring_oscillator_17:e3|enable~buf0" File: D:/vhdl/lab9/ring_oscillator_17.vhd Line: 5
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 5 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "clk_50Mhz" File: D:/vhdl/lab9/lab9_01.vhd Line: 7
-    Warning (15610): No output dependent on input pin "reset" File: D:/vhdl/lab9/lab9_01.vhd Line: 7
-    Warning (15610): No output dependent on input pin "sw[0]" File: D:/vhdl/lab9/lab9_01.vhd Line: 8
-    Warning (15610): No output dependent on input pin "sw[1]" File: D:/vhdl/lab9/lab9_01.vhd Line: 8
-    Warning (15610): No output dependent on input pin "sw[2]" File: D:/vhdl/lab9/lab9_01.vhd Line: 8
-Info (21057): Implemented 13 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 280 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 5 input pins
     Info (21059): Implemented 8 output pins
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 39 warnings
-    Info: Peak virtual memory: 4802 megabytes
-    Info: Processing ended: Fri Jan 13 08:54:37 2023
+    Info (21061): Implemented 267 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 9 warnings
+    Info: Peak virtual memory: 4809 megabytes
+    Info: Processing ended: Fri Jan 13 13:14:05 2023
     Info: Elapsed time: 00:00:08
     Info: Total CPU time (on all processors): 00:00:15
 

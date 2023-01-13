@@ -2,4 +2,148 @@
 Timing Analyzer Summary
 ------------------------------------------------------------
 
+Type  : Slow 1200mV 85C Model Setup 'sw[0]'
+Slack : -15.019
+TNS   : -730.256
+
+Type  : Slow 1200mV 85C Model Setup 'clk_50Mhz'
+Slack : -10.271
+TNS   : -465.467
+
+Type  : Slow 1200mV 85C Model Setup 'divider:g1|clk_out'
+Slack : -1.973
+TNS   : -36.512
+
+Type  : Slow 1200mV 85C Model Setup 'divider:g2|clk_out'
+Slack : -1.933
+TNS   : -34.114
+
+Type  : Slow 1200mV 85C Model Hold 'clk_50Mhz'
+Slack : -4.203
+TNS   : -176.501
+
+Type  : Slow 1200mV 85C Model Hold 'divider:g2|clk_out'
+Slack : 0.407
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'divider:g1|clk_out'
+Slack : 0.409
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'sw[0]'
+Slack : 1.295
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'clk_50Mhz'
+Slack : -3.477
+TNS   : -786.122
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'sw[0]'
+Slack : -3.000
+TNS   : -72.390
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'divider:g1|clk_out'
+Slack : -1.285
+TNS   : -33.410
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'divider:g2|clk_out'
+Slack : -1.285
+TNS   : -33.410
+
+Type  : Slow 1200mV 0C Model Setup 'sw[0]'
+Slack : -13.749
+TNS   : -668.421
+
+Type  : Slow 1200mV 0C Model Setup 'clk_50Mhz'
+Slack : -9.344
+TNS   : -422.784
+
+Type  : Slow 1200mV 0C Model Setup 'divider:g1|clk_out'
+Slack : -1.662
+TNS   : -30.189
+
+Type  : Slow 1200mV 0C Model Setup 'divider:g2|clk_out'
+Slack : -1.609
+TNS   : -27.932
+
+Type  : Slow 1200mV 0C Model Hold 'clk_50Mhz'
+Slack : -3.874
+TNS   : -163.241
+
+Type  : Slow 1200mV 0C Model Hold 'divider:g2|clk_out'
+Slack : 0.364
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'divider:g1|clk_out'
+Slack : 0.365
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'sw[0]'
+Slack : 1.119
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'clk_50Mhz'
+Slack : -3.226
+TNS   : -714.486
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'sw[0]'
+Slack : -3.000
+TNS   : -72.390
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'divider:g1|clk_out'
+Slack : -1.285
+TNS   : -33.410
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'divider:g2|clk_out'
+Slack : -1.285
+TNS   : -33.410
+
+Type  : Fast 1200mV 0C Model Setup 'sw[0]'
+Slack : -6.787
+TNS   : -322.661
+
+Type  : Fast 1200mV 0C Model Setup 'clk_50Mhz'
+Slack : -4.580
+TNS   : -208.341
+
+Type  : Fast 1200mV 0C Model Setup 'divider:g1|clk_out'
+Slack : -0.489
+TNS   : -5.463
+
+Type  : Fast 1200mV 0C Model Setup 'divider:g2|clk_out'
+Slack : -0.470
+TNS   : -4.466
+
+Type  : Fast 1200mV 0C Model Hold 'clk_50Mhz'
+Slack : -1.284
+TNS   : -48.355
+
+Type  : Fast 1200mV 0C Model Hold 'divider:g1|clk_out'
+Slack : 0.188
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'divider:g2|clk_out'
+Slack : 0.188
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'sw[0]'
+Slack : 0.570
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'clk_50Mhz'
+Slack : -3.000
+TNS   : -343.455
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'sw[0]'
+Slack : -3.000
+TNS   : -65.700
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'divider:g1|clk_out'
+Slack : -1.000
+TNS   : -26.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'divider:g2|clk_out'
+Slack : -1.000
+TNS   : -26.000
+
 ------------------------------------------------------------

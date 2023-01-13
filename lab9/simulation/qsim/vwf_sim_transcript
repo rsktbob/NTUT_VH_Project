@@ -26,15 +26,15 @@ Info: Running Quartus Prime EDA Netlist Writer
     Info: the sole purpose of programming logic devices manufactured by
     Info: Intel and sold by Intel or its authorized distributors.  Please
     Info: refer to the applicable agreement for further details.
-    Info: Processing started: Fri Jan 13 08:56:03 2023
+    Info: Processing started: Fri Jan 13 13:17:01 2023
 Info: Command: quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off lab9_01 -c lab9_01 --vector_source=D:/vhdl/lab9/Waveform.vwf --testbench_file=D:/vhdl/lab9/simulation/qsim/Waveform.vwf.vht
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 
 Completed successfully. 
 
-**** Generating the functional simulation netlist ****
+**** Generating the timing simulation netlist ****
 
-quartus_eda --write_settings_files=off --simulation --functional=on --flatten_buses=off --tool=modelsim_oem --format=vhdl --output_directory="D:/vhdl/lab9/simulation/qsim/" lab9_01 -c lab9_01
+quartus_eda --write_settings_files=off --simulation --functional=off --flatten_buses=off --timescale=1ps --tool=modelsim_oem --format=vhdl --output_directory="D:/vhdl/lab9/simulation/qsim/" lab9_01 -c lab9_01
 
 Warning (292006): Can't contact license server "13239@140.124.182.47" -- this server will be ignored.
 Info: *******************************************************************
@@ -53,15 +53,22 @@ Info: Running Quartus Prime EDA Netlist Writer
     Info: the sole purpose of programming logic devices manufactured by
     Info: Intel and sold by Intel or its authorized distributors.  Please
     Info: refer to the applicable agreement for further details.
-    Info: Processing started: Fri Jan 13 08:56:04 2023
-Info: Command: quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=vhdl --output_directory=D:/vhdl/lab9/simulation/qsim/ lab9_01 -c lab9_01
+    Info: Processing started: Fri Jan 13 13:17:02 2023
+Info: Command: quartus_eda --write_settings_files=off --simulation=on --functional=off --flatten_buses=off --timescale=1ps --tool=modelsim_oem --format=vhdl --output_directory=D:/vhdl/lab9/simulation/qsim/ lab9_01 -c lab9_01
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (204019): Generated file lab9_01_7_1200mv_85c_slow.vho in folder "D:/vhdl/lab9/simulation/qsim//" for EDA simulation tool
+Info (204019): Generated file lab9_01_7_1200mv_0c_slow.vho in folder "D:/vhdl/lab9/simulation/qsim//" for EDA simulation tool
+Info (204019): Generated file lab9_01_min_1200mv_0c_fast.vho in folder "D:/vhdl/lab9/simulation/qsim//" for EDA simulation tool
 Info (204019): Generated file lab9_01.vho in folder "D:/vhdl/lab9/simulation/qsim//" for EDA simulation tool
+Info (204019): Generated file lab9_01_7_1200mv_85c_vhd_slow.sdo in folder "D:/vhdl/lab9/simulation/qsim//" for EDA simulation tool
+Info (204019): Generated file lab9_01_7_1200mv_0c_vhd_slow.sdo in folder "D:/vhdl/lab9/simulation/qsim//" for EDA simulation tool
+Info (204019): Generated file lab9_01_min_1200mv_0c_vhd_fast.sdo in folder "D:/vhdl/lab9/simulation/qsim//" for EDA simulation tool
+Info (204019): Generated file lab9_01_vhd.sdo in folder "D:/vhdl/lab9/simulation/qsim//" for EDA simulation tool
 Info: Quartus Prime EDA Netlist Writer was successful. 0 errors, 2 warnings
-    Info: Peak virtual memory: 4644 megabytes
-    Info: Processing ended: Fri Jan 13 08:56:04 2023
-    Info: Elapsed time: 00:00:00
-    Info: Total CPU time (on all processors): 00:00:00
+    Info: Peak virtual memory: 4653 megabytes
+    Info: Processing ended: Fri Jan 13 13:17:03 2023
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:01
 
 Completed successfully. 
 
@@ -77,13 +84,13 @@ c:/intelfpga_lite/18.1/modelsim_ase/win32aloem//vsim -c -do lab9_01.do
 
 Reading C:/intelFPGA_lite/18.1/modelsim_ase/tcl/vsim/pref.tcl
 
-# 10.5b
 
+# 10.5b
 
 # do lab9_01.do
 # ** Warning: (vlib-34) Library already exists at "work".
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 08:56:05 on Jan 13,2023
+# Start time: 13:17:03 on Jan 13,2023
 # vcom -work work lab9_01.vho 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -94,30 +101,36 @@ Reading C:/intelFPGA_lite/18.1/modelsim_ase/tcl/vsim/pref.tcl
 # -- Loading package cycloneive_components
 # -- Compiling entity hard_block
 # -- Compiling architecture structure of hard_block
+
+# -- Loading package dffeas_pack
+# -- Loading package altera_primitives_components
 # -- Compiling entity lab9_01
 # -- Compiling architecture structure of lab9_01
-# End time: 08:56:05 on Jan 13,2023, Elapsed time: 0:00:00
+# End time: 13:17:03 on Jan 13,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 08:56:05 on Jan 13,2023
+# Start time: 13:17:03 on Jan 13,2023
 # vcom -work work Waveform.vwf.vht 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity lab9_01_vhd_vec_tst
 # -- Compiling architecture lab9_01_arch of lab9_01_vhd_vec_tst
-# End time: 08:56:05 on Jan 13,2023, Elapsed time: 0:00:00
+# End time: 13:17:03 on Jan 13,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 
-# vsim -novopt -c -t 1ps -L cycloneive -L altera -L altera_mf -L 220model -L sgate -L altera_lnsim work.lab9_01_vhd_vec_tst 
-# Start time: 08:56:05 on Jan 13,2023
+# vsim -novopt -c -t 1ps -sdfmax lab9_01_vhd_vec_tst/i1=lab9_01_vhd.sdo -L cycloneive -L altera -L altera_mf -L 220model -L sgate -L altera_lnsim work.lab9_01_vhd_vec_tst 
+# Start time: 13:17:03 on Jan 13,2023
 # Loading std.standard
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
 # Loading work.lab9_01_vhd_vec_tst(lab9_01_arch)
+# SDF 10.5b Compiler 2016.10 Oct  5 2016
+# 
 # Loading ieee.vital_timing(body)
 # Loading ieee.vital_primitives(body)
+# Loading altera.dffeas_pack
+# Loading altera.altera_primitives_components
 # Loading cycloneive.cycloneive_atom_pack(body)
 # Loading cycloneive.cycloneive_components
 # Loading work.lab9_01(structure)
@@ -125,10 +138,20 @@ Reading C:/intelFPGA_lite/18.1/modelsim_ase/tcl/vsim/pref.tcl
 # Loading ieee.std_logic_arith(body)
 # Loading cycloneive.cycloneive_io_obuf(arch)
 # Loading cycloneive.cycloneive_io_ibuf(arch)
-# after#33
+# Loading cycloneive.cycloneive_lcell_comb(vital_lcell_comb)
+# Loading cycloneive.cycloneive_clkctrl(vital_clkctrl)
+# Loading cycloneive.cycloneive_ena_reg(behave)
+# Loading altera.dffeas(vital_dffeas)
+# Loading instances from lab9_01_vhd.sdo
+# Loading timing data from lab9_01_vhd.sdo
+# ** Warning: Design size of 48796 statements exceeds ModelSim-Intel FPGA Starter Edition recommended capacity.
+# Expect performance to be adversely affected.
+# ** Note: (vsim-3587) SDF Backannotation Successfully Completed.
+#    Time: 0 ps  Iteration: 0  Instance: /lab9_01_vhd_vec_tst File: Waveform.vwf.vht
+# after#35
 
-# End time: 08:56:05 on Jan 13,2023, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
+# End time: 13:17:04 on Jan 13,2023, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 1
 
 Completed successfully. 
 
@@ -140,7 +163,15 @@ Reading D:/vhdl/lab9/simulation/qsim/lab9_01.msim.vcd...
 
 Processing channel transitions... 
 
-Writing the resulting VWF to D:/vhdl/lab9/simulation/qsim/lab9_01_20230113085605.sim.vwf
+Warning: counter1_clk1hz - signal not found in VCD.
+
+Warning: counter1_clk50Mhz - signal not found in VCD.
+
+Warning: counter2_clk1hz - signal not found in VCD.
+
+Warning: counter2_clk50Mhz - signal not found in VCD.
+
+Writing the resulting VWF to D:/vhdl/lab9/simulation/qsim/lab9_01_20230113131704.sim.vwf
 
 Finished VCD to VWF conversion.
 

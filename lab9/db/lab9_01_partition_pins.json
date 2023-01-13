@@ -2,7 +2,60 @@
 	"partitions" : [
 		{
 			"name" : "Top",
-			"pins" : []
+			"pins" : [
+				{
+					"name" : "ouput[0]",
+					"strict" : false
+				},
+				{
+					"name" : "ouput[1]",
+					"strict" : false
+				},
+				{
+					"name" : "ouput[2]",
+					"strict" : false
+				},
+				{
+					"name" : "ouput[3]",
+					"strict" : false
+				},
+				{
+					"name" : "ouput[4]",
+					"strict" : false
+				},
+				{
+					"name" : "ouput[5]",
+					"strict" : false
+				},
+				{
+					"name" : "ouput[6]",
+					"strict" : false
+				},
+				{
+					"name" : "ouput[7]",
+					"strict" : false
+				},
+				{
+					"name" : "sw[2]",
+					"strict" : false
+				},
+				{
+					"name" : "sw[0]",
+					"strict" : false
+				},
+				{
+					"name" : "sw[1]",
+					"strict" : false
+				},
+				{
+					"name" : "reset",
+					"strict" : false
+				},
+				{
+					"name" : "clk_50Mhz",
+					"strict" : false
+				}
+			]
 		}
 	]
 }

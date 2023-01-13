@@ -13,7 +13,8 @@ architecture func of ring_oscillator_7 is
 	attribute syn_keep of chain: signal is true;
 begin
 	f1:for i in 1 to 6 generate
-		chain(i) <= chain(i-1);
+		chain(i) <= not chain(i-1);
 	end generate;
 	chain(0) <= enable and not chain(6);
+	ck_out <= chain(6);
 end;

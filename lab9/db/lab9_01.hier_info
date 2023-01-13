@@ -7,14 +7,14 @@ clk_50Mhz => ring_oscillator_17:f5.enable
 clk_50Mhz => ring_oscillator_7:f6.enable
 clk_50Mhz => ring_oscillator_9:f7.enable
 clk_50Mhz => ring_oscillator_9:f8.enable
-clk_50Mhz => ring_oscillator_13:e1.enable
-clk_50Mhz => ring_oscillator_7:e2.enable
-clk_50Mhz => ring_oscillator_7:e3.enable
-clk_50Mhz => ring_oscillator_21:e4.enable
-clk_50Mhz => ring_oscillator_17:e5.enable
-clk_50Mhz => ring_oscillator_7:e6.enable
-clk_50Mhz => ring_oscillator_9:e7.enable
-clk_50Mhz => ring_oscillator_9:e8.enable
+clk_50Mhz => ring_oscillator_9:e1.enable
+clk_50Mhz => ring_oscillator_9:e2.enable
+clk_50Mhz => ring_oscillator_17:e3.enable
+clk_50Mhz => ring_oscillator_7:e4.enable
+clk_50Mhz => ring_oscillator_7:e5.enable
+clk_50Mhz => ring_oscillator_9:e6.enable
+clk_50Mhz => ring_oscillator_15:e7.enable
+clk_50Mhz => ring_oscillator_17:e8.enable
 reset => reset~buf0.DATAIN
 sw[0] => mux:k1.sw[0]
 sw[0] => mux:k2.sw[0]
@@ -36,83 +36,83 @@ ouput[7] <= comparator:p1.ouput[7]
 
 
 |lab9_01|ring_oscillator_13:f1
-enable => ~NO_FANOUT~
-ck_out <= <GND>
+enable => enable~buf0.DATAIN
+ck_out <= ck_out.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |lab9_01|ring_oscillator_7:f2
-enable => ~NO_FANOUT~
-ck_out <= <GND>
+enable => enable~buf0.DATAIN
+ck_out <= ck_out.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |lab9_01|ring_oscillator_7:f3
-enable => ~NO_FANOUT~
-ck_out <= <GND>
+enable => enable~buf0.DATAIN
+ck_out <= ck_out.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |lab9_01|ring_oscillator_21:f4
-enable => ~NO_FANOUT~
-ck_out <= <GND>
+enable => enable~buf0.DATAIN
+ck_out <= ck_out.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |lab9_01|ring_oscillator_17:f5
-enable => ~NO_FANOUT~
-ck_out <= <GND>
+enable => enable~buf0.DATAIN
+ck_out <= ck_out.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |lab9_01|ring_oscillator_7:f6
-enable => ~NO_FANOUT~
-ck_out <= <GND>
+enable => enable~buf0.DATAIN
+ck_out <= ck_out.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |lab9_01|ring_oscillator_9:f7
-enable => ~NO_FANOUT~
-ck_out <= <GND>
+enable => enable~buf0.DATAIN
+ck_out <= ck_out.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |lab9_01|ring_oscillator_9:f8
-enable => ~NO_FANOUT~
-ck_out <= <GND>
+enable => enable~buf0.DATAIN
+ck_out <= ck_out.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|lab9_01|ring_oscillator_13:e1
-enable => ~NO_FANOUT~
-ck_out <= <GND>
+|lab9_01|ring_oscillator_9:e1
+enable => enable~buf0.DATAIN
+ck_out <= ck_out.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|lab9_01|ring_oscillator_7:e2
-enable => ~NO_FANOUT~
-ck_out <= <GND>
+|lab9_01|ring_oscillator_9:e2
+enable => enable~buf0.DATAIN
+ck_out <= ck_out.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|lab9_01|ring_oscillator_7:e3
-enable => ~NO_FANOUT~
-ck_out <= <GND>
+|lab9_01|ring_oscillator_17:e3
+enable => enable~buf0.DATAIN
+ck_out <= ck_out.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|lab9_01|ring_oscillator_21:e4
-enable => ~NO_FANOUT~
-ck_out <= <GND>
+|lab9_01|ring_oscillator_7:e4
+enable => enable~buf0.DATAIN
+ck_out <= ck_out.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|lab9_01|ring_oscillator_17:e5
-enable => ~NO_FANOUT~
-ck_out <= <GND>
+|lab9_01|ring_oscillator_7:e5
+enable => enable~buf0.DATAIN
+ck_out <= ck_out.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|lab9_01|ring_oscillator_7:e6
-enable => ~NO_FANOUT~
-ck_out <= <GND>
+|lab9_01|ring_oscillator_9:e6
+enable => enable~buf0.DATAIN
+ck_out <= ck_out.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|lab9_01|ring_oscillator_9:e7
-enable => ~NO_FANOUT~
-ck_out <= <GND>
+|lab9_01|ring_oscillator_15:e7
+enable => enable~buf0.DATAIN
+ck_out <= ck_out.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|lab9_01|ring_oscillator_9:e8
-enable => ~NO_FANOUT~
-ck_out <= <GND>
+|lab9_01|ring_oscillator_17:e8
+enable => enable~buf0.DATAIN
+ck_out <= ck_out.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |lab9_01|mux:k1
