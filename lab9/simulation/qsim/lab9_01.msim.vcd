@@ -1,0 +1,516 @@
+$comment
+	File created using the following command:
+		vcd file lab9_01.msim.vcd -direction
+$end
+$date
+	Fri Jan 13 08:56:05 2023
+$end
+$version
+	ModelSim Version 10.5b
+$end
+$timescale
+	1ps
+$end
+
+$scope module lab9_01_vhd_vec_tst $end
+$var wire 1 ! clk_50Mhz $end
+$var wire 1 " ouput [7] $end
+$var wire 1 # ouput [6] $end
+$var wire 1 $ ouput [5] $end
+$var wire 1 % ouput [4] $end
+$var wire 1 & ouput [3] $end
+$var wire 1 ' ouput [2] $end
+$var wire 1 ( ouput [1] $end
+$var wire 1 ) ouput [0] $end
+$var wire 1 * reset $end
+$var wire 1 + sw [2] $end
+$var wire 1 , sw [1] $end
+$var wire 1 - sw [0] $end
+
+$scope module i1 $end
+$var wire 1 . gnd $end
+$var wire 1 / vcc $end
+$var wire 1 0 unknown $end
+$var wire 1 1 devoe $end
+$var wire 1 2 devclrn $end
+$var wire 1 3 devpor $end
+$var wire 1 4 ww_devoe $end
+$var wire 1 5 ww_devclrn $end
+$var wire 1 6 ww_devpor $end
+$var wire 1 7 ww_clk_50Mhz $end
+$var wire 1 8 ww_reset $end
+$var wire 1 9 ww_sw [2] $end
+$var wire 1 : ww_sw [1] $end
+$var wire 1 ; ww_sw [0] $end
+$var wire 1 < ww_ouput [7] $end
+$var wire 1 = ww_ouput [6] $end
+$var wire 1 > ww_ouput [5] $end
+$var wire 1 ? ww_ouput [4] $end
+$var wire 1 @ ww_ouput [3] $end
+$var wire 1 A ww_ouput [2] $end
+$var wire 1 B ww_ouput [1] $end
+$var wire 1 C ww_ouput [0] $end
+$var wire 1 D \clk_50Mhz~input_o\ $end
+$var wire 1 E \reset~input_o\ $end
+$var wire 1 F \sw[0]~input_o\ $end
+$var wire 1 G \sw[1]~input_o\ $end
+$var wire 1 H \sw[2]~input_o\ $end
+$var wire 1 I \ouput[0]~output_o\ $end
+$var wire 1 J \ouput[1]~output_o\ $end
+$var wire 1 K \ouput[2]~output_o\ $end
+$var wire 1 L \ouput[3]~output_o\ $end
+$var wire 1 M \ouput[4]~output_o\ $end
+$var wire 1 N \ouput[5]~output_o\ $end
+$var wire 1 O \ouput[6]~output_o\ $end
+$var wire 1 P \ouput[7]~output_o\ $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+0!
+0*
+0.
+1/
+x0
+11
+12
+13
+14
+15
+16
+07
+08
+0D
+0E
+0F
+0G
+0H
+0I
+0J
+0K
+0L
+0M
+0N
+0O
+0P
+0+
+0,
+0-
+09
+0:
+0;
+0<
+0=
+0>
+0?
+0@
+0A
+0B
+0C
+0"
+0#
+0$
+0%
+0&
+0'
+0(
+0)
+$end
+#10000
+1!
+17
+1D
+#20000
+0!
+07
+0D
+#30000
+1!
+17
+1D
+#40000
+0!
+07
+0D
+#50000
+1!
+17
+1D
+#60000
+0!
+07
+0D
+#70000
+1!
+17
+1D
+#80000
+0!
+07
+0D
+#90000
+1!
+17
+1D
+#100000
+0!
+07
+0D
+#110000
+1!
+17
+1D
+#120000
+0!
+07
+0D
+#130000
+1!
+17
+1D
+#140000
+0!
+07
+0D
+#150000
+1!
+17
+1D
+#160000
+0!
+07
+0D
+#170000
+1!
+17
+1D
+#180000
+0!
+07
+0D
+#190000
+1!
+17
+1D
+#200000
+0!
+07
+0D
+#210000
+1!
+17
+1D
+#220000
+0!
+07
+0D
+#230000
+1!
+17
+1D
+#240000
+0!
+07
+0D
+#250000
+1!
+17
+1D
+#260000
+0!
+07
+0D
+#270000
+1!
+17
+1D
+#280000
+0!
+07
+0D
+#290000
+1!
+17
+1D
+#300000
+0!
+07
+0D
+#310000
+1!
+17
+1D
+#320000
+0!
+07
+0D
+#330000
+1!
+17
+1D
+#340000
+0!
+07
+0D
+#350000
+1!
+17
+1D
+#360000
+0!
+07
+0D
+#370000
+1!
+17
+1D
+#380000
+0!
+07
+0D
+#390000
+1!
+17
+1D
+#400000
+0!
+07
+0D
+#410000
+1!
+17
+1D
+#420000
+0!
+07
+0D
+#430000
+1!
+17
+1D
+#440000
+0!
+07
+0D
+#450000
+1!
+17
+1D
+#460000
+0!
+07
+0D
+#470000
+1!
+17
+1D
+#480000
+0!
+07
+0D
+#490000
+1!
+17
+1D
+#500000
+0!
+07
+0D
+#510000
+1!
+17
+1D
+#520000
+0!
+07
+0D
+#530000
+1!
+17
+1D
+#540000
+0!
+07
+0D
+#550000
+1!
+17
+1D
+#560000
+0!
+07
+0D
+#570000
+1!
+17
+1D
+#580000
+0!
+07
+0D
+#590000
+1!
+17
+1D
+#600000
+0!
+07
+0D
+#610000
+1!
+17
+1D
+#620000
+0!
+07
+0D
+#630000
+1!
+17
+1D
+#640000
+0!
+07
+0D
+#650000
+1!
+17
+1D
+#660000
+0!
+07
+0D
+#670000
+1!
+17
+1D
+#680000
+0!
+07
+0D
+#690000
+1!
+17
+1D
+#700000
+0!
+07
+0D
+#710000
+1!
+17
+1D
+#720000
+0!
+07
+0D
+#730000
+1!
+17
+1D
+#740000
+0!
+07
+0D
+#750000
+1!
+17
+1D
+#760000
+0!
+07
+0D
+#770000
+1!
+17
+1D
+#780000
+0!
+07
+0D
+#790000
+1!
+17
+1D
+#800000
+0!
+07
+0D
+#810000
+1!
+17
+1D
+#820000
+0!
+07
+0D
+#830000
+1!
+17
+1D
+#840000
+0!
+07
+0D
+#850000
+1!
+17
+1D
+#860000
+0!
+07
+0D
+#870000
+1!
+17
+1D
+#880000
+0!
+07
+0D
+#890000
+1!
+17
+1D
+#900000
+0!
+07
+0D
+#910000
+1!
+17
+1D
+#920000
+0!
+07
+0D
+#930000
+1!
+17
+1D
+#940000
+0!
+07
+0D
+#950000
+1!
+17
+1D
+#960000
+0!
+07
+0D
+#970000
+1!
+17
+1D
+#980000
+0!
+07
+0D
+#990000
+1!
+17
+1D
+#1000000

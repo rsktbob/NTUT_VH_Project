@@ -1,0 +1,495 @@
+|lab9_01
+clk_50Mhz => ring_oscillator_13:f1.enable
+clk_50Mhz => ring_oscillator_7:f2.enable
+clk_50Mhz => ring_oscillator_7:f3.enable
+clk_50Mhz => ring_oscillator_21:f4.enable
+clk_50Mhz => ring_oscillator_17:f5.enable
+clk_50Mhz => ring_oscillator_7:f6.enable
+clk_50Mhz => ring_oscillator_9:f7.enable
+clk_50Mhz => ring_oscillator_9:f8.enable
+clk_50Mhz => ring_oscillator_13:e1.enable
+clk_50Mhz => ring_oscillator_7:e2.enable
+clk_50Mhz => ring_oscillator_7:e3.enable
+clk_50Mhz => ring_oscillator_21:e4.enable
+clk_50Mhz => ring_oscillator_17:e5.enable
+clk_50Mhz => ring_oscillator_7:e6.enable
+clk_50Mhz => ring_oscillator_9:e7.enable
+clk_50Mhz => ring_oscillator_9:e8.enable
+reset => reset~buf0.DATAIN
+sw[0] => mux:k1.sw[0]
+sw[0] => mux:k2.sw[0]
+sw[0] => comparator:p1.sw[0]
+sw[1] => mux:k1.sw[1]
+sw[1] => mux:k2.sw[1]
+sw[1] => comparator:p1.sw[1]
+sw[2] => mux:k1.sw[2]
+sw[2] => mux:k2.sw[2]
+sw[2] => comparator:p1.sw[2]
+ouput[0] <= comparator:p1.ouput[0]
+ouput[1] <= comparator:p1.ouput[1]
+ouput[2] <= comparator:p1.ouput[2]
+ouput[3] <= comparator:p1.ouput[3]
+ouput[4] <= comparator:p1.ouput[4]
+ouput[5] <= comparator:p1.ouput[5]
+ouput[6] <= comparator:p1.ouput[6]
+ouput[7] <= comparator:p1.ouput[7]
+
+
+|lab9_01|ring_oscillator_13:f1
+enable => ~NO_FANOUT~
+ck_out <= <GND>
+
+
+|lab9_01|ring_oscillator_7:f2
+enable => ~NO_FANOUT~
+ck_out <= <GND>
+
+
+|lab9_01|ring_oscillator_7:f3
+enable => ~NO_FANOUT~
+ck_out <= <GND>
+
+
+|lab9_01|ring_oscillator_21:f4
+enable => ~NO_FANOUT~
+ck_out <= <GND>
+
+
+|lab9_01|ring_oscillator_17:f5
+enable => ~NO_FANOUT~
+ck_out <= <GND>
+
+
+|lab9_01|ring_oscillator_7:f6
+enable => ~NO_FANOUT~
+ck_out <= <GND>
+
+
+|lab9_01|ring_oscillator_9:f7
+enable => ~NO_FANOUT~
+ck_out <= <GND>
+
+
+|lab9_01|ring_oscillator_9:f8
+enable => ~NO_FANOUT~
+ck_out <= <GND>
+
+
+|lab9_01|ring_oscillator_13:e1
+enable => ~NO_FANOUT~
+ck_out <= <GND>
+
+
+|lab9_01|ring_oscillator_7:e2
+enable => ~NO_FANOUT~
+ck_out <= <GND>
+
+
+|lab9_01|ring_oscillator_7:e3
+enable => ~NO_FANOUT~
+ck_out <= <GND>
+
+
+|lab9_01|ring_oscillator_21:e4
+enable => ~NO_FANOUT~
+ck_out <= <GND>
+
+
+|lab9_01|ring_oscillator_17:e5
+enable => ~NO_FANOUT~
+ck_out <= <GND>
+
+
+|lab9_01|ring_oscillator_7:e6
+enable => ~NO_FANOUT~
+ck_out <= <GND>
+
+
+|lab9_01|ring_oscillator_9:e7
+enable => ~NO_FANOUT~
+ck_out <= <GND>
+
+
+|lab9_01|ring_oscillator_9:e8
+enable => ~NO_FANOUT~
+ck_out <= <GND>
+
+
+|lab9_01|mux:k1
+w0 => Mux0.IN0
+w1 => Mux0.IN1
+w2 => Mux0.IN2
+w2 => Mux0.IN3
+w2 => Mux0.IN4
+w2 => Mux0.IN5
+w2 => Mux0.IN6
+w2 => Mux0.IN7
+w3 => ~NO_FANOUT~
+w4 => ~NO_FANOUT~
+w5 => ~NO_FANOUT~
+w6 => ~NO_FANOUT~
+w7 => ~NO_FANOUT~
+sw[0] => Mux0.IN10
+sw[1] => Mux0.IN9
+sw[2] => Mux0.IN8
+ck_out <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab9_01|mux:k2
+w0 => Mux0.IN0
+w1 => Mux0.IN1
+w2 => Mux0.IN2
+w2 => Mux0.IN3
+w2 => Mux0.IN4
+w2 => Mux0.IN5
+w2 => Mux0.IN6
+w2 => Mux0.IN7
+w3 => ~NO_FANOUT~
+w4 => ~NO_FANOUT~
+w5 => ~NO_FANOUT~
+w6 => ~NO_FANOUT~
+w7 => ~NO_FANOUT~
+sw[0] => Mux0.IN10
+sw[1] => Mux0.IN9
+sw[2] => Mux0.IN8
+ck_out <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab9_01|divider:g1
+clk_50M => clk_out~reg0.CLK
+clk_50M => count[0].CLK
+clk_50M => count[1].CLK
+clk_50M => count[2].CLK
+clk_50M => count[3].CLK
+clk_50M => count[4].CLK
+clk_50M => count[5].CLK
+clk_50M => count[6].CLK
+clk_50M => count[7].CLK
+clk_50M => count[8].CLK
+clk_50M => count[9].CLK
+clk_50M => count[10].CLK
+clk_50M => count[11].CLK
+clk_50M => count[12].CLK
+clk_50M => count[13].CLK
+clk_50M => count[14].CLK
+clk_50M => count[15].CLK
+clk_50M => count[16].CLK
+clk_50M => count[17].CLK
+clk_50M => count[18].CLK
+clk_50M => count[19].CLK
+clk_50M => count[20].CLK
+clk_50M => count[21].CLK
+clk_50M => count[22].CLK
+clk_50M => count[23].CLK
+clk_50M => count[24].CLK
+clk_50M => count[25].CLK
+clk_out <= clk_out~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab9_01|divider:g2
+clk_50M => clk_out~reg0.CLK
+clk_50M => count[0].CLK
+clk_50M => count[1].CLK
+clk_50M => count[2].CLK
+clk_50M => count[3].CLK
+clk_50M => count[4].CLK
+clk_50M => count[5].CLK
+clk_50M => count[6].CLK
+clk_50M => count[7].CLK
+clk_50M => count[8].CLK
+clk_50M => count[9].CLK
+clk_50M => count[10].CLK
+clk_50M => count[11].CLK
+clk_50M => count[12].CLK
+clk_50M => count[13].CLK
+clk_50M => count[14].CLK
+clk_50M => count[15].CLK
+clk_50M => count[16].CLK
+clk_50M => count[17].CLK
+clk_50M => count[18].CLK
+clk_50M => count[19].CLK
+clk_50M => count[20].CLK
+clk_50M => count[21].CLK
+clk_50M => count[22].CLK
+clk_50M => count[23].CLK
+clk_50M => count[24].CLK
+clk_50M => count[25].CLK
+clk_out <= clk_out~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab9_01|counter:s1
+reset => counter[0]~reg0.ACLR
+reset => counter[1]~reg0.ACLR
+reset => counter[2]~reg0.ACLR
+reset => counter[3]~reg0.ACLR
+reset => counter[4]~reg0.ACLR
+reset => counter[5]~reg0.ACLR
+reset => counter[6]~reg0.ACLR
+reset => counter[7]~reg0.ACLR
+reset => counter[8]~reg0.ACLR
+reset => counter[9]~reg0.ACLR
+reset => counter[10]~reg0.ACLR
+reset => counter[11]~reg0.ACLR
+reset => counter[12]~reg0.ACLR
+reset => counter[13]~reg0.ACLR
+reset => counter[14]~reg0.ACLR
+reset => counter[15]~reg0.ACLR
+reset => counter[16]~reg0.ACLR
+reset => counter[17]~reg0.ACLR
+reset => counter[18]~reg0.ACLR
+reset => counter[19]~reg0.ACLR
+reset => counter[20]~reg0.ACLR
+reset => counter[21]~reg0.ACLR
+reset => counter[22]~reg0.ACLR
+reset => counter[23]~reg0.ACLR
+reset => counter[24]~reg0.ACLR
+reset => counter[25]~reg0.ACLR
+reset => counter[26]~reg0.ACLR
+reset => counter[27]~reg0.ACLR
+reset => counter[28]~reg0.ACLR
+reset => counter[29]~reg0.ACLR
+reset => counter[30]~reg0.ACLR
+reset => counter[31]~reg0.ACLR
+clk_in => counter[0]~reg0.CLK
+clk_in => counter[1]~reg0.CLK
+clk_in => counter[2]~reg0.CLK
+clk_in => counter[3]~reg0.CLK
+clk_in => counter[4]~reg0.CLK
+clk_in => counter[5]~reg0.CLK
+clk_in => counter[6]~reg0.CLK
+clk_in => counter[7]~reg0.CLK
+clk_in => counter[8]~reg0.CLK
+clk_in => counter[9]~reg0.CLK
+clk_in => counter[10]~reg0.CLK
+clk_in => counter[11]~reg0.CLK
+clk_in => counter[12]~reg0.CLK
+clk_in => counter[13]~reg0.CLK
+clk_in => counter[14]~reg0.CLK
+clk_in => counter[15]~reg0.CLK
+clk_in => counter[16]~reg0.CLK
+clk_in => counter[17]~reg0.CLK
+clk_in => counter[18]~reg0.CLK
+clk_in => counter[19]~reg0.CLK
+clk_in => counter[20]~reg0.CLK
+clk_in => counter[21]~reg0.CLK
+clk_in => counter[22]~reg0.CLK
+clk_in => counter[23]~reg0.CLK
+clk_in => counter[24]~reg0.CLK
+clk_in => counter[25]~reg0.CLK
+clk_in => counter[26]~reg0.CLK
+clk_in => counter[27]~reg0.CLK
+clk_in => counter[28]~reg0.CLK
+clk_in => counter[29]~reg0.CLK
+clk_in => counter[30]~reg0.CLK
+clk_in => counter[31]~reg0.CLK
+counter[0] <= counter[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+counter[1] <= counter[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+counter[2] <= counter[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+counter[3] <= counter[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+counter[4] <= counter[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+counter[5] <= counter[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+counter[6] <= counter[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+counter[7] <= counter[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+counter[8] <= counter[8]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+counter[9] <= counter[9]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+counter[10] <= counter[10]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+counter[11] <= counter[11]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+counter[12] <= counter[12]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+counter[13] <= counter[13]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+counter[14] <= counter[14]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+counter[15] <= counter[15]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+counter[16] <= counter[16]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+counter[17] <= counter[17]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+counter[18] <= counter[18]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+counter[19] <= counter[19]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+counter[20] <= counter[20]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+counter[21] <= counter[21]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+counter[22] <= counter[22]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+counter[23] <= counter[23]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+counter[24] <= counter[24]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+counter[25] <= counter[25]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+counter[26] <= counter[26]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+counter[27] <= counter[27]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+counter[28] <= counter[28]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+counter[29] <= counter[29]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+counter[30] <= counter[30]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+counter[31] <= counter[31]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab9_01|counter:s2
+reset => counter[0]~reg0.ACLR
+reset => counter[1]~reg0.ACLR
+reset => counter[2]~reg0.ACLR
+reset => counter[3]~reg0.ACLR
+reset => counter[4]~reg0.ACLR
+reset => counter[5]~reg0.ACLR
+reset => counter[6]~reg0.ACLR
+reset => counter[7]~reg0.ACLR
+reset => counter[8]~reg0.ACLR
+reset => counter[9]~reg0.ACLR
+reset => counter[10]~reg0.ACLR
+reset => counter[11]~reg0.ACLR
+reset => counter[12]~reg0.ACLR
+reset => counter[13]~reg0.ACLR
+reset => counter[14]~reg0.ACLR
+reset => counter[15]~reg0.ACLR
+reset => counter[16]~reg0.ACLR
+reset => counter[17]~reg0.ACLR
+reset => counter[18]~reg0.ACLR
+reset => counter[19]~reg0.ACLR
+reset => counter[20]~reg0.ACLR
+reset => counter[21]~reg0.ACLR
+reset => counter[22]~reg0.ACLR
+reset => counter[23]~reg0.ACLR
+reset => counter[24]~reg0.ACLR
+reset => counter[25]~reg0.ACLR
+reset => counter[26]~reg0.ACLR
+reset => counter[27]~reg0.ACLR
+reset => counter[28]~reg0.ACLR
+reset => counter[29]~reg0.ACLR
+reset => counter[30]~reg0.ACLR
+reset => counter[31]~reg0.ACLR
+clk_in => counter[0]~reg0.CLK
+clk_in => counter[1]~reg0.CLK
+clk_in => counter[2]~reg0.CLK
+clk_in => counter[3]~reg0.CLK
+clk_in => counter[4]~reg0.CLK
+clk_in => counter[5]~reg0.CLK
+clk_in => counter[6]~reg0.CLK
+clk_in => counter[7]~reg0.CLK
+clk_in => counter[8]~reg0.CLK
+clk_in => counter[9]~reg0.CLK
+clk_in => counter[10]~reg0.CLK
+clk_in => counter[11]~reg0.CLK
+clk_in => counter[12]~reg0.CLK
+clk_in => counter[13]~reg0.CLK
+clk_in => counter[14]~reg0.CLK
+clk_in => counter[15]~reg0.CLK
+clk_in => counter[16]~reg0.CLK
+clk_in => counter[17]~reg0.CLK
+clk_in => counter[18]~reg0.CLK
+clk_in => counter[19]~reg0.CLK
+clk_in => counter[20]~reg0.CLK
+clk_in => counter[21]~reg0.CLK
+clk_in => counter[22]~reg0.CLK
+clk_in => counter[23]~reg0.CLK
+clk_in => counter[24]~reg0.CLK
+clk_in => counter[25]~reg0.CLK
+clk_in => counter[26]~reg0.CLK
+clk_in => counter[27]~reg0.CLK
+clk_in => counter[28]~reg0.CLK
+clk_in => counter[29]~reg0.CLK
+clk_in => counter[30]~reg0.CLK
+clk_in => counter[31]~reg0.CLK
+counter[0] <= counter[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+counter[1] <= counter[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+counter[2] <= counter[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+counter[3] <= counter[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+counter[4] <= counter[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+counter[5] <= counter[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+counter[6] <= counter[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+counter[7] <= counter[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+counter[8] <= counter[8]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+counter[9] <= counter[9]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+counter[10] <= counter[10]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+counter[11] <= counter[11]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+counter[12] <= counter[12]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+counter[13] <= counter[13]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+counter[14] <= counter[14]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+counter[15] <= counter[15]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+counter[16] <= counter[16]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+counter[17] <= counter[17]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+counter[18] <= counter[18]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+counter[19] <= counter[19]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+counter[20] <= counter[20]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+counter[21] <= counter[21]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+counter[22] <= counter[22]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+counter[23] <= counter[23]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+counter[24] <= counter[24]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+counter[25] <= counter[25]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+counter[26] <= counter[26]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+counter[27] <= counter[27]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+counter[28] <= counter[28]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+counter[29] <= counter[29]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+counter[30] <= counter[30]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+counter[31] <= counter[31]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab9_01|comparator:p1
+counter1[0] => LessThan0.IN32
+counter1[1] => LessThan0.IN31
+counter1[2] => LessThan0.IN30
+counter1[3] => LessThan0.IN29
+counter1[4] => LessThan0.IN28
+counter1[5] => LessThan0.IN27
+counter1[6] => LessThan0.IN26
+counter1[7] => LessThan0.IN25
+counter1[8] => LessThan0.IN24
+counter1[9] => LessThan0.IN23
+counter1[10] => LessThan0.IN22
+counter1[11] => LessThan0.IN21
+counter1[12] => LessThan0.IN20
+counter1[13] => LessThan0.IN19
+counter1[14] => LessThan0.IN18
+counter1[15] => LessThan0.IN17
+counter1[16] => LessThan0.IN16
+counter1[17] => LessThan0.IN15
+counter1[18] => LessThan0.IN14
+counter1[19] => LessThan0.IN13
+counter1[20] => LessThan0.IN12
+counter1[21] => LessThan0.IN11
+counter1[22] => LessThan0.IN10
+counter1[23] => LessThan0.IN9
+counter1[24] => LessThan0.IN8
+counter1[25] => LessThan0.IN7
+counter1[26] => LessThan0.IN6
+counter1[27] => LessThan0.IN5
+counter1[28] => LessThan0.IN4
+counter1[29] => LessThan0.IN3
+counter1[30] => LessThan0.IN2
+counter1[31] => LessThan0.IN1
+counter2[0] => LessThan0.IN64
+counter2[1] => LessThan0.IN63
+counter2[2] => LessThan0.IN62
+counter2[3] => LessThan0.IN61
+counter2[4] => LessThan0.IN60
+counter2[5] => LessThan0.IN59
+counter2[6] => LessThan0.IN58
+counter2[7] => LessThan0.IN57
+counter2[8] => LessThan0.IN56
+counter2[9] => LessThan0.IN55
+counter2[10] => LessThan0.IN54
+counter2[11] => LessThan0.IN53
+counter2[12] => LessThan0.IN52
+counter2[13] => LessThan0.IN51
+counter2[14] => LessThan0.IN50
+counter2[15] => LessThan0.IN49
+counter2[16] => LessThan0.IN48
+counter2[17] => LessThan0.IN47
+counter2[18] => LessThan0.IN46
+counter2[19] => LessThan0.IN45
+counter2[20] => LessThan0.IN44
+counter2[21] => LessThan0.IN43
+counter2[22] => LessThan0.IN42
+counter2[23] => LessThan0.IN41
+counter2[24] => LessThan0.IN40
+counter2[25] => LessThan0.IN39
+counter2[26] => LessThan0.IN38
+counter2[27] => LessThan0.IN37
+counter2[28] => LessThan0.IN36
+counter2[29] => LessThan0.IN35
+counter2[30] => LessThan0.IN34
+counter2[31] => LessThan0.IN33
+sw[0] => Decoder0.IN2
+sw[1] => Decoder0.IN1
+sw[2] => Decoder0.IN0
+ouput[0] <= ouput[0]$latch.DB_MAX_OUTPUT_PORT_TYPE
+ouput[1] <= ouput[1]$latch.DB_MAX_OUTPUT_PORT_TYPE
+ouput[2] <= ouput[2]$latch.DB_MAX_OUTPUT_PORT_TYPE
+ouput[3] <= ouput[3]$latch.DB_MAX_OUTPUT_PORT_TYPE
+ouput[4] <= ouput[4]$latch.DB_MAX_OUTPUT_PORT_TYPE
+ouput[5] <= ouput[5]$latch.DB_MAX_OUTPUT_PORT_TYPE
+ouput[6] <= ouput[6]$latch.DB_MAX_OUTPUT_PORT_TYPE
+ouput[7] <= ouput[7]$latch.DB_MAX_OUTPUT_PORT_TYPE
+
+
